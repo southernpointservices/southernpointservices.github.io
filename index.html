@@ -11,6 +11,10 @@ content="Southern Point provides professional services, talent acquisition, recr
 
 <style>
 
+/* =========================
+   RESET
+========================= */
+
 *{
     margin:0;
     padding:0;
@@ -24,7 +28,7 @@ html{
 body{
     font-family:Arial, Helvetica, sans-serif;
     color:#111820;
-    background:#fff;
+    background:#ffffff;
     line-height:1.6;
 }
 
@@ -36,48 +40,64 @@ a{
 .container{
     width:92%;
     max-width:1180px;
-    margin:auto;
+    margin:0 auto;
 }
 
-/* ================= HEADER ================= */
+
+/* =========================
+   HEADER
+========================= */
 
 header{
     position:sticky;
     top:0;
-    z-index:999;
-    background:rgba(255,255,255,.98);
+    z-index:1000;
+    background:#ffffff;
     border-bottom:1px solid #e7eaed;
 }
 
 .nav{
-    min-height:82px;
+    min-height:86px;
     display:flex;
     align-items:center;
     justify-content:space-between;
     gap:30px;
 }
 
-/* LOGO */
+
+/* =========================
+   LOGO
+========================= */
 
 .brand{
     display:flex;
     align-items:center;
+    flex-shrink:0;
 }
 
 .brand-logo{
-    width:190px;
+    display:block;
+    width:200px;
     max-width:100%;
     height:auto;
-    display:block;
+    object-fit:contain;
 }
 
-/* NAVIGATION */
+
+/* =========================
+   NAVIGATION
+========================= */
 
 nav{
     display:flex;
-    gap:25px;
+    align-items:center;
+    gap:27px;
     font-size:13px;
     font-weight:700;
+}
+
+nav a{
+    transition:color .2s ease;
 }
 
 nav a:hover{
@@ -85,36 +105,46 @@ nav a:hover{
 }
 
 .nav-cta{
+    display:inline-block;
     background:#0b4f9c;
-    color:#fff;
-    padding:11px 17px;
+    color:#ffffff;
+    padding:12px 18px;
     font-size:11px;
     font-weight:800;
     text-transform:uppercase;
+    letter-spacing:.5px;
+    transition:.2s ease;
 }
 
-/* ================= BUTTONS ================= */
+.nav-cta:hover{
+    background:#083d78;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
 
 .btn{
     display:inline-block;
     padding:14px 23px;
     background:#0b4f9c;
     border:1px solid #0b4f9c;
-    color:#fff;
+    color:#ffffff;
     font-size:12px;
     font-weight:800;
     text-transform:uppercase;
     letter-spacing:.7px;
-    transition:.2s;
+    transition:.2s ease;
 }
 
 .btn:hover{
-    opacity:.9;
-    transform:translateY(-1px);
+    transform:translateY(-2px);
+    opacity:.92;
 }
 
 .btn-outline{
-    background:#fff;
+    background:#ffffff;
     color:#0b4f9c;
 }
 
@@ -123,11 +153,22 @@ nav a:hover{
     border-color:#c62828;
 }
 
-/* ================= HERO ================= */
+.btn-red:hover{
+    background:#a91f1f;
+}
+
+
+/* =========================
+   HERO
+========================= */
 
 .hero{
-    padding:120px 0 105px;
-    background:linear-gradient(135deg,#f4f7fa 0%,#ffffff 70%);
+    padding:120px 0 110px;
+    background:linear-gradient(
+        135deg,
+        #f4f7fa 0%,
+        #ffffff 72%
+    );
 }
 
 .hero-grid{
@@ -157,7 +198,7 @@ nav a:hover{
 }
 
 .hero-text{
-    max-width:660px;
+    max-width:680px;
     font-size:19px;
     color:#56636e;
     margin-bottom:32px;
@@ -175,18 +216,21 @@ nav a:hover{
     color:#6c7780;
 }
 
-/* HERO PANEL */
+
+/* =========================
+   HERO PANEL
+========================= */
 
 .hero-panel{
     background:#101820;
-    color:#fff;
+    color:#ffffff;
     padding:43px;
     box-shadow:17px 17px 0 #c62828;
 }
 
 .panel-line{
-    height:4px;
     width:50px;
+    height:4px;
     background:#0b4f9c;
     margin-bottom:25px;
 }
@@ -214,11 +258,14 @@ nav a:hover{
     font-size:14px;
 }
 
-/* ================= TRUST BAR ================= */
+
+/* =========================
+   TRUST BAR
+========================= */
 
 .trust{
     border-bottom:1px solid #e4e8ec;
-    background:#fff;
+    background:#ffffff;
 }
 
 .trust-grid{
@@ -234,7 +281,7 @@ nav a:hover{
 }
 
 .trust-item:last-child{
-    border:none;
+    border-right:none;
 }
 
 .trust strong{
@@ -251,7 +298,10 @@ nav a:hover{
     margin-top:3px;
 }
 
-/* ================= GENERAL ================= */
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
 
 section{
     padding:95px 0;
@@ -272,7 +322,10 @@ section{
     margin-bottom:45px;
 }
 
-/* ================= SERVICES ================= */
+
+/* =========================
+   SERVICES
+========================= */
 
 .services-grid{
     display:grid;
@@ -284,7 +337,7 @@ section{
     padding:38px;
     border:1px solid #e0e5e9;
     min-height:300px;
-    transition:.2s;
+    transition:.2s ease;
 }
 
 .service:hover{
@@ -308,11 +361,14 @@ section{
     color:#5b6771;
 }
 
-/* ================= EMPLOYERS ================= */
+
+/* =========================
+   DARK SECTION
+========================= */
 
 .dark{
     background:#101820;
-    color:#fff;
+    color:#ffffff;
 }
 
 .dark .section-label{
@@ -335,7 +391,10 @@ section{
     margin-bottom:0;
 }
 
-/* ================= CANDIDATES ================= */
+
+/* =========================
+   CANDIDATES
+========================= */
 
 .candidate{
     background:#f4f6f8;
@@ -346,7 +405,10 @@ section{
     margin-bottom:27px;
 }
 
-/* ================= ABOUT ================= */
+
+/* =========================
+   ABOUT
+========================= */
 
 .about-grid{
     display:grid;
@@ -380,11 +442,14 @@ section{
     color:#75818b;
 }
 
-/* ================= CONTACT ================= */
+
+/* =========================
+   CONTACT
+========================= */
 
 .contact{
     background:#0b4f9c;
-    color:#fff;
+    color:#ffffff;
 }
 
 .contact .section-label{
@@ -403,12 +468,15 @@ section{
 }
 
 .email{
-    color:#fff;
+    color:#ffffff;
     font-weight:700;
-    border-bottom:1px solid #fff;
+    border-bottom:1px solid #ffffff;
 }
 
-/* ================= FOOTER ================= */
+
+/* =========================
+   FOOTER
+========================= */
 
 footer{
     background:#090e13;
@@ -424,7 +492,7 @@ footer{
 }
 
 .footer-name{
-    color:#fff;
+    color:#ffffff;
     font-weight:900;
     letter-spacing:2px;
 }
@@ -439,7 +507,10 @@ footer p{
     margin:4px 0;
 }
 
-/* ================= MOBILE ================= */
+
+/* =========================
+   MOBILE
+========================= */
 
 @media(max-width:850px){
 
@@ -478,6 +549,10 @@ footer p{
         border-bottom:1px solid #e3e7ea;
     }
 
+    .trust-item:last-child{
+        border-bottom:none;
+    }
+
     section{
         padding:70px 0;
     }
@@ -499,11 +574,18 @@ footer p{
 </style>
 </head>
 
+
 <body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
 
 <header>
 
 <div class="container nav">
+
 
 <a href="index.html" class="brand">
 
@@ -543,25 +625,31 @@ Contact
 <a
 class="nav-cta"
 href="https://docs.google.com/forms/d/e/1FAIpQLSfFJkCIGUUAJHneKtaJLAcF2x1qYCsEdjBRy3Uexwae7a0xTA/viewform"
-target="_blank">
+target="_blank"
+rel="noopener">
 
 Request Talent
 
 </a>
+
 
 </div>
 
 </header>
 
 
-<main id="home">
+
+<main>
 
 
-<!-- HERO -->
+<!-- =========================
+     HERO
+========================= -->
 
 <section class="hero">
 
 <div class="container hero-grid">
+
 
 <div>
 
@@ -593,6 +681,7 @@ identify qualified talent and strengthen their operations.
 
 <div class="hero-buttons">
 
+
 <a
 class="btn"
 href="employers.html">
@@ -609,6 +698,7 @@ href="candidates.html">
 For Candidates
 
 </a>
+
 
 </div>
 
@@ -662,17 +752,21 @@ Professional business support
 
 </div>
 
+
 </div>
 
 </section>
 
 
 
-<!-- TRUST BAR -->
+<!-- =========================
+     TRUST BAR
+========================= -->
 
 <div class="trust">
 
 <div class="container trust-grid">
+
 
 <div class="trust-item">
 
@@ -712,21 +806,26 @@ Business Support
 
 </div>
 
-</div>
 
 </div>
 
+</div>
 
 
-<!-- SERVICES -->
+
+<!-- =========================
+     SERVICES
+========================= -->
 
 <section id="services">
 
 <div class="container">
 
+
 <div class="section-label">
 OUR SERVICES
 </div>
+
 
 <h2 class="section-title">
 Solutions built around your needs.
@@ -812,11 +911,14 @@ of each engagement.
 
 
 
-<!-- EMPLOYERS -->
+<!-- =========================
+     EMPLOYERS
+========================= -->
 
 <section id="employers" class="dark">
 
 <div class="container split">
+
 
 <div>
 
@@ -853,17 +955,21 @@ Explore Employer Services
 
 </div>
 
+
 </div>
 
 </section>
 
 
 
-<!-- CANDIDATES -->
+<!-- =========================
+     CANDIDATES
+========================= -->
 
 <section id="candidates" class="candidate">
 
 <div class="container split">
+
 
 <div>
 
@@ -900,17 +1006,21 @@ Candidate Information
 
 </div>
 
+
 </div>
 
 </section>
 
 
 
-<!-- ABOUT -->
+<!-- =========================
+     ABOUT
+========================= -->
 
 <section id="about">
 
 <div class="container about-grid">
+
 
 <div>
 
@@ -928,6 +1038,7 @@ People-focused.
 
 
 <div class="about">
+
 
 <p>
 
@@ -950,6 +1061,7 @@ workforce, and professional-service needs.
 
 
 <div class="stats">
+
 
 <div class="stat">
 
@@ -989,6 +1101,7 @@ At the center
 
 </div>
 
+
 </div>
 
 </div>
@@ -999,11 +1112,14 @@ At the center
 
 
 
-<!-- CONTACT -->
+<!-- =========================
+     CONTACT
+========================= -->
 
 <section id="contact" class="contact">
 
 <div class="container split">
+
 
 <div>
 
@@ -1024,6 +1140,7 @@ Start a conversation with Southern Point.
 
 <div class="contact-actions">
 
+
 <a
 class="btn btn-red"
 href="employers.html">
@@ -1041,6 +1158,7 @@ southernpoint.services@gmail.com
 
 </a>
 
+
 </div>
 
 </div>
@@ -1052,9 +1170,14 @@ southernpoint.services@gmail.com
 
 
 
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
 
 <div class="container footer-grid">
+
 
 <div>
 
@@ -1089,6 +1212,7 @@ DeJaun Henry Jr., Sole Proprietor.
 </p>
 
 </div>
+
 
 </div>
 
