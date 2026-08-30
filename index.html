@@ -39,13 +39,13 @@ a{
     margin:auto;
 }
 
-/* ================= NAV ================= */
+/* ================= NAVIGATION ================= */
 
 header{
     position:sticky;
     top:0;
     z-index:999;
-    background:rgba(255,255,255,.97);
+    background:rgba(255,255,255,.98);
     border-bottom:1px solid #e7eaed;
 }
 
@@ -91,7 +91,7 @@ header{
 
 nav{
     display:flex;
-    gap:28px;
+    gap:25px;
     font-size:13px;
     font-weight:700;
 }
@@ -121,10 +121,12 @@ nav a:hover{
     font-weight:800;
     text-transform:uppercase;
     letter-spacing:.7px;
+    transition:.2s;
 }
 
 .btn:hover{
     opacity:.9;
+    transform:translateY(-1px);
 }
 
 .btn-outline{
@@ -141,8 +143,7 @@ nav a:hover{
 
 .hero{
     padding:120px 0 105px;
-    background:
-        linear-gradient(135deg,#f4f7fa 0%,#ffffff 70%);
+    background:linear-gradient(135deg,#f4f7fa 0%,#ffffff 70%);
 }
 
 .hero-grid{
@@ -508,15 +509,13 @@ footer p{
 </style>
 </head>
 
-
 <body>
-
 
 <header>
 
 <div class="container nav">
 
-<a href="#home" class="brand">
+<a href="index.html" class="brand">
 
 <div class="brand-mark">
 SP
@@ -539,15 +538,25 @@ PROFESSIONAL SERVICES
 
 <nav>
 
-<a href="#services">Services</a>
+<a href="index.html">
+Home
+</a>
 
-<a href="#employers">Employers</a>
+<a href="employers.html">
+Employers
+</a>
 
-<a href="#candidates">Candidates</a>
+<a href="candidates.html">
+Candidates
+</a>
 
-<a href="#about">About</a>
+<a href="#services">
+Services
+</a>
 
-<a href="#contact">Contact</a>
+<a href="#contact">
+Contact
+</a>
 
 </nav>
 
@@ -564,7 +573,6 @@ Request Talent
 </div>
 
 </header>
-
 
 
 <main id="home">
@@ -608,20 +616,18 @@ identify qualified talent and strengthen their operations.
 
 <a
 class="btn"
-href="https://docs.google.com/forms/d/e/1FAIpQLSfFJkCIGUUAJHneKtaJLAcF2x1qYCsEdjBRy3Uexwae7a0xTA/viewform"
-target="_blank">
+href="employers.html">
 
-Request Talent
+Employer Services
 
 </a>
 
 
 <a
 class="btn btn-outline"
-href="https://docs.google.com/forms/d/e/1FAIpQLSc3fteIChZHPqEdmaw1FRBx3fLHtTAC0G1V5L0uS2zqkz8AQw/viewform"
-target="_blank">
+href="candidates.html">
 
-Submit Your Resume
+For Candidates
 
 </a>
 
@@ -860,10 +866,9 @@ Southern Point may assist.
 
 <a
 class="btn btn-red"
-href="https://docs.google.com/forms/d/e/1FAIpQLSfFJkCIGUUAJHneKtaJLAcF2x1qYCsEdjBRy3Uexwae7a0xTA/viewform"
-target="_blank">
+href="employers.html">
 
-Request Talent
+Explore Employer Services
 
 </a>
 
@@ -908,10 +913,9 @@ may align with your background.
 
 <a
 class="btn"
-href="https://docs.google.com/forms/d/e/1FAIpQLSc3fteIChZHPqEdmaw1FRBx3fLHtTAC0G1V5L0uS2zqkz8AQw/viewform"
-target="_blank">
+href="candidates.html">
 
-Submit Your Resume
+Candidate Information
 
 </a>
 
@@ -944,7 +948,7 @@ People-focused.
 </div>
 
 
-<div>
+<div class="about">
 
 <p>
 
@@ -1043,8 +1047,7 @@ Start a conversation with Southern Point.
 
 <a
 class="btn btn-red"
-href="https://docs.google.com/forms/d/e/1FAIpQLSfFJkCIGUUAJHneKtaJLAcF2x1qYCsEdjBRy3Uexwae7a0xTA/viewform"
-target="_blank">
+href="employers.html">
 
 Request Talent
 
