@@ -39,7 +39,7 @@ a{
     margin:auto;
 }
 
-/* ================= NAVIGATION ================= */
+/* ================= HEADER ================= */
 
 header{
     position:sticky;
@@ -57,37 +57,21 @@ header{
     gap:30px;
 }
 
+/* LOGO */
+
 .brand{
     display:flex;
     align-items:center;
-    gap:12px;
 }
 
-.brand-mark{
-    width:43px;
-    height:43px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:#0b4f9c;
-    color:#fff;
-    font-weight:900;
-    font-size:15px;
-}
-
-.brand-name{
-    font-weight:900;
-    font-size:15px;
-    letter-spacing:2px;
-}
-
-.brand-sub{
+.brand-logo{
+    width:190px;
+    max-width:100%;
+    height:auto;
     display:block;
-    color:#707b85;
-    font-size:8px;
-    letter-spacing:2px;
-    margin-top:2px;
 }
+
+/* NAVIGATION */
 
 nav{
     display:flex;
@@ -190,6 +174,8 @@ nav a:hover{
     font-size:12px;
     color:#6c7780;
 }
+
+/* HERO PANEL */
 
 .hero-panel{
     background:#101820;
@@ -462,6 +448,10 @@ footer p{
         display:none;
     }
 
+    .brand-logo{
+        width:165px;
+    }
+
     .hero-grid,
     .split,
     .about-grid{
@@ -517,21 +507,10 @@ footer p{
 
 <a href="index.html" class="brand">
 
-<div class="brand-mark">
-SP
-</div>
-
-<div>
-
-<div class="brand-name">
-SOUTHERN POINT
-</div>
-
-<span class="brand-sub">
-PROFESSIONAL SERVICES
-</span>
-
-</div>
+<img
+src="southern-point-logo.png"
+alt="Southern Point Professional Services"
+class="brand-logo">
 
 </a>
 
