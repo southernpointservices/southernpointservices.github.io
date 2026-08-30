@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Southern Point | Professional Services</title>
+
+<meta name="description"
+content="Southern Point provides professional services, talent acquisition, recruiting, workforce solutions, and business support.">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    color:#111820;
+    background:#fff;
+    line-height:1.6;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+.container{
+    width:92%;
+    max-width:1180px;
+    margin:auto;
+}
+
+/* ================= NAV ================= */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:999;
+    background:rgba(255,255,255,.97);
+    border-bottom:1px solid #e7eaed;
+}
+
+.nav{
+    min-height:82px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:30px;
+}
+
+.brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.brand-mark{
+    width:43px;
+    height:43px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#0b4f9c;
+    color:#fff;
+    font-weight:900;
+    font-size:15px;
+}
+
+.brand-name{
+    font-weight:900;
+    font-size:15px;
+    letter-spacing:2px;
+}
+
+.brand-sub{
+    display:block;
+    color:#707b85;
+    font-size:8px;
+    letter-spacing:2px;
+    margin-top:2px;
+}
+
+nav{
+    display:flex;
+    gap:28px;
+    font-size:13px;
+    font-weight:700;
+}
+
+nav a:hover{
+    color:#0b4f9c;
+}
+
+.nav-cta{
+    background:#0b4f9c;
+    color:#fff;
+    padding:11px 17px;
+    font-size:11px;
+    font-weight:800;
+    text-transform:uppercase;
+}
+
+/* ================= BUTTONS ================= */
+
+.btn{
+    display:inline-block;
+    padding:14px 23px;
+    background:#0b4f9c;
+    border:1px solid #0b4f9c;
+    color:#fff;
+    font-size:12px;
+    font-weight:800;
+    text-transform:uppercase;
+    letter-spacing:.7px;
+}
+
+.btn:hover{
+    opacity:.9;
+}
+
+.btn-outline{
+    background:#fff;
+    color:#0b4f9c;
+}
+
+.btn-red{
+    background:#c62828;
+    border-color:#c62828;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    padding:120px 0 105px;
+    background:
+        linear-gradient(135deg,#f4f7fa 0%,#ffffff 70%);
+}
+
+.hero-grid{
+    display:grid;
+    grid-template-columns:1.2fr .8fr;
+    gap:85px;
+    align-items:center;
+}
+
+.eyebrow{
+    color:#0b4f9c;
+    font-size:11px;
+    font-weight:900;
+    letter-spacing:2.3px;
+    margin-bottom:18px;
+}
+
+.hero h1{
+    font-size:clamp(44px,6vw,76px);
+    line-height:1.02;
+    letter-spacing:-3.5px;
+    margin-bottom:27px;
+}
+
+.hero h1 span{
+    color:#0b4f9c;
+}
+
+.hero-text{
+    max-width:660px;
+    font-size:19px;
+    color:#56636e;
+    margin-bottom:32px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.location{
+    margin-top:22px;
+    font-size:12px;
+    color:#6c7780;
+}
+
+.hero-panel{
+    background:#101820;
+    color:#fff;
+    padding:43px;
+    box-shadow:17px 17px 0 #c62828;
+}
+
+.panel-line{
+    height:4px;
+    width:50px;
+    background:#0b4f9c;
+    margin-bottom:25px;
+}
+
+.panel-label{
+    color:#aebac4;
+    font-size:10px;
+    font-weight:800;
+    letter-spacing:2px;
+}
+
+.hero-panel h2{
+    font-size:26px;
+    line-height:1.25;
+    margin:11px 0 27px;
+}
+
+.hero-panel ul{
+    list-style:none;
+}
+
+.hero-panel li{
+    padding:11px 0;
+    border-top:1px solid #303b44;
+    font-size:14px;
+}
+
+/* ================= TRUST BAR ================= */
+
+.trust{
+    border-bottom:1px solid #e4e8ec;
+    background:#fff;
+}
+
+.trust-grid{
+    min-height:105px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    align-items:center;
+    text-align:center;
+}
+
+.trust-item{
+    border-right:1px solid #e3e7ea;
+}
+
+.trust-item:last-child{
+    border:none;
+}
+
+.trust strong{
+    display:block;
+    font-size:14px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+.trust span{
+    display:block;
+    color:#737e87;
+    font-size:11px;
+    margin-top:3px;
+}
+
+/* ================= GENERAL ================= */
+
+section{
+    padding:95px 0;
+}
+
+.section-label{
+    color:#0b4f9c;
+    font-size:11px;
+    font-weight:900;
+    letter-spacing:2px;
+    margin-bottom:15px;
+}
+
+.section-title{
+    font-size:clamp(33px,4vw,53px);
+    line-height:1.08;
+    letter-spacing:-1.8px;
+    margin-bottom:45px;
+}
+
+/* ================= SERVICES ================= */
+
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.service{
+    padding:38px;
+    border:1px solid #e0e5e9;
+    min-height:300px;
+    transition:.2s;
+}
+
+.service:hover{
+    border-color:#0b4f9c;
+    transform:translateY(-3px);
+}
+
+.service-number{
+    color:#c62828;
+    font-size:11px;
+    font-weight:900;
+    letter-spacing:1px;
+}
+
+.service h3{
+    font-size:22px;
+    margin:30px 0 13px;
+}
+
+.service p{
+    color:#5b6771;
+}
+
+/* ================= EMPLOYERS ================= */
+
+.dark{
+    background:#101820;
+    color:#fff;
+}
+
+.dark .section-label{
+    color:#dcecff;
+}
+
+.split{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:90px;
+    align-items:center;
+}
+
+.dark p{
+    color:#c4ccd3;
+    margin-bottom:27px;
+}
+
+.dark .section-title{
+    margin-bottom:0;
+}
+
+/* ================= CANDIDATES ================= */
+
+.candidate{
+    background:#f4f6f8;
+}
+
+.candidate p{
+    color:#5c6872;
+    margin-bottom:27px;
+}
+
+/* ================= ABOUT ================= */
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:90px;
+}
+
+.about p{
+    color:#59656f;
+    margin-bottom:18px;
+}
+
+.stats{
+    display:flex;
+    gap:35px;
+    margin-top:35px;
+}
+
+.stat{
+    border-left:3px solid #0b4f9c;
+    padding-left:13px;
+}
+
+.stat strong{
+    display:block;
+    font-size:18px;
+}
+
+.stat span{
+    font-size:11px;
+    color:#75818b;
+}
+
+/* ================= CONTACT ================= */
+
+.contact{
+    background:#0b4f9c;
+    color:#fff;
+}
+
+.contact .section-label{
+    color:#dcecff;
+}
+
+.contact p{
+    color:#dcecff;
+}
+
+.contact-actions{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:20px;
+}
+
+.email{
+    color:#fff;
+    font-weight:700;
+    border-bottom:1px solid #fff;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#090e13;
+    color:#bcc5cc;
+    padding:42px 0;
+    font-size:12px;
+}
+
+.footer-grid{
+    display:flex;
+    justify-content:space-between;
+    gap:50px;
+}
+
+.footer-name{
+    color:#fff;
+    font-weight:900;
+    letter-spacing:2px;
+}
+
+.footer-right{
+    max-width:560px;
+    text-align:right;
+    color:#8b97a1;
+}
+
+footer p{
+    margin:4px 0;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:850px){
+
+    nav,
+    .nav-cta{
+        display:none;
+    }
+
+    .hero-grid,
+    .split,
+    .about-grid{
+        grid-template-columns:1fr;
+        gap:45px;
+    }
+
+    .hero{
+        padding:75px 0;
+    }
+
+    .services-grid{
+        grid-template-columns:1fr;
+    }
+
+    .trust-grid{
+        grid-template-columns:1fr;
+        padding:20px 0;
+    }
+
+    .trust-item{
+        padding:14px 0;
+        border-right:none;
+        border-bottom:1px solid #e3e7ea;
+    }
+
+    section{
+        padding:70px 0;
+    }
+
+    .stats{
+        flex-wrap:wrap;
+    }
+
+    .footer-grid{
+        flex-direction:column;
+    }
+
+    .footer-right{
+        text-align:left;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<header>
+
+<div class="container nav">
+
+<a href="#home" class="brand">
+
+<div class="brand-mark">
+SP
+</div>
+
+<div>
+
+<div class="brand-name">
+SOUTHERN POINT
+</div>
+
+<span class="brand-sub">
+PROFESSIONAL SERVICES
+</span>
+
+</div>
+
+</a>
+
+
+<nav>
+
+<a href="#services">Services</a>
+
+<a href="#employers">Employers</a>
+
+<a href="#candidates">Candidates</a>
+
+<a href="#about">About</a>
+
+<a href="#contact">Contact</a>
+
+</nav>
+
+
+<a
+class="nav-cta"
+href="https://docs.google.com/forms/d/e/1FAIpQLSfFJkCIGUUAJHneKtaJLAcF2x1qYCsEdjBRy3Uexwae7a0xTA/viewform"
+target="_blank">
+
+Request Talent
+
+</a>
+
+</div>
+
+</header>
+
+
+
+<main id="home">
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="container hero-grid">
+
+<div>
+
+<div class="eyebrow">
+TALENT • WORKFORCE • PROFESSIONAL SERVICES
+</div>
+
+
+<h1>
+
+Professional services.
+
+<br>
+
+<span>People-focused solutions.</span>
+
+</h1>
+
+
+<p class="hero-text">
+
+Southern Point provides professional services,
+talent acquisition, recruiting, workforce solutions,
+and business support designed to help organizations
+identify qualified talent and strengthen their operations.
+
+</p>
+
+
+<div class="hero-buttons">
+
+<a
+class="btn"
+href="https://docs.google.com/forms/d/e/1FAIpQLSfFJkCIGUUAJHneKtaJLAcF2x1qYCsEdjBRy3Uexwae7a0xTA/viewform"
+target="_blank">
+
+Request Talent
+
+</a>
+
+
+<a
+class="btn btn-outline"
+href="https://docs.google.com/forms/d/e/1FAIpQLSc3fteIChZHPqEdmaw1FRBx3fLHtTAC0G1V5L0uS2zqkz8AQw/viewform"
+target="_blank">
+
+Submit Your Resume
+
+</a>
+
+</div>
+
+
+<div class="location">
+
+Houston, Texas · Serving organizations nationwide
+
+</div>
+
+</div>
+
+
+
+<div class="hero-panel">
+
+<div class="panel-line"></div>
+
+<div class="panel-label">
+OUR FOCUS
+</div>
+
+<h2>
+
+Connecting organizations with
+the people and support they need
+to move forward.
+
+</h2>
+
+
+<ul>
+
+<li>
+Targeted talent acquisition
+</li>
+
+<li>
+Recruiting & sourcing support
+</li>
+
+<li>
+Workforce solutions
+</li>
+
+<li>
+Professional business support
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- TRUST BAR -->
+
+<div class="trust">
+
+<div class="container trust-grid">
+
+<div class="trust-item">
+
+<strong>
+Talent
+</strong>
+
+<span>
+Acquisition & Recruiting
+</span>
+
+</div>
+
+
+<div class="trust-item">
+
+<strong>
+Workforce
+</strong>
+
+<span>
+Flexible Solutions
+</span>
+
+</div>
+
+
+<div class="trust-item">
+
+<strong>
+Professional
+</strong>
+
+<span>
+Business Support
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- SERVICES -->
+
+<section id="services">
+
+<div class="container">
+
+<div class="section-label">
+OUR SERVICES
+</div>
+
+<h2 class="section-title">
+Solutions built around your needs.
+</h2>
+
+
+<div class="services-grid">
+
+
+<article class="service">
+
+<div class="service-number">
+01
+</div>
+
+<h3>
+Talent Acquisition
+</h3>
+
+<p>
+
+Targeted candidate sourcing,
+recruiting support, screening,
+and talent pipeline development
+for organizations with hiring needs.
+
+</p>
+
+</article>
+
+
+
+<article class="service">
+
+<div class="service-number">
+02
+</div>
+
+<h3>
+Workforce Solutions
+</h3>
+
+<p>
+
+Flexible support designed to help
+organizations develop stronger talent
+pipelines and respond to workforce
+demands.
+
+</p>
+
+</article>
+
+
+
+<article class="service">
+
+<div class="service-number">
+03
+</div>
+
+<h3>
+Professional Services
+</h3>
+
+<p>
+
+Practical business, research,
+administrative, and operational
+support tailored to the requirements
+of each engagement.
+
+</p>
+
+</article>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- EMPLOYERS -->
+
+<section id="employers" class="dark">
+
+<div class="container split">
+
+<div>
+
+<div class="section-label">
+FOR EMPLOYERS
+</div>
+
+<h2 class="section-title">
+Need qualified talent?
+</h2>
+
+</div>
+
+
+<div>
+
+<p>
+
+Tell us about your hiring needs.
+We'll review your requirements
+and follow up to discuss how
+Southern Point may assist.
+
+</p>
+
+
+<a
+class="btn btn-red"
+href="https://docs.google.com/forms/d/e/1FAIpQLSfFJkCIGUUAJHneKtaJLAcF2x1qYCsEdjBRy3Uexwae7a0xTA/viewform"
+target="_blank">
+
+Request Talent
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- CANDIDATES -->
+
+<section id="candidates" class="candidate">
+
+<div class="container split">
+
+<div>
+
+<div class="section-label">
+FOR CANDIDATES
+</div>
+
+<h2 class="section-title">
+Your next opportunity starts here.
+</h2>
+
+</div>
+
+
+<div>
+
+<p>
+
+Submit your professional information
+and resume for consideration for
+current or future opportunities that
+may align with your background.
+
+</p>
+
+
+<a
+class="btn"
+href="https://docs.google.com/forms/d/e/1FAIpQLSc3fteIChZHPqEdmaw1FRBx3fLHtTAC0G1V5L0uS2zqkz8AQw/viewform"
+target="_blank">
+
+Submit Your Resume
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<div class="container about-grid">
+
+<div>
+
+<div class="section-label">
+ABOUT SOUTHERN POINT
+</div>
+
+<h2 class="section-title">
+Professional.
+Responsive.
+People-focused.
+</h2>
+
+</div>
+
+
+<div>
+
+<p>
+
+Southern Point is a Houston-based
+professional services business focused
+on talent acquisition, recruiting,
+workforce solutions, and professional
+support.
+
+</p>
+
+
+<p>
+
+We take a practical, responsive approach
+to helping organizations address hiring,
+workforce, and professional-service needs.
+
+</p>
+
+
+<div class="stats">
+
+<div class="stat">
+
+<strong>
+Houston
+</strong>
+
+<span>
+Texas-based
+</span>
+
+</div>
+
+
+<div class="stat">
+
+<strong>
+Nationwide
+</strong>
+
+<span>
+Service reach
+</span>
+
+</div>
+
+
+<div class="stat">
+
+<strong>
+People
+</strong>
+
+<span>
+At the center
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- CONTACT -->
+
+<section id="contact" class="contact">
+
+<div class="container split">
+
+<div>
+
+<div class="section-label">
+LET'S CONNECT
+</div>
+
+<h2 class="section-title">
+Have a hiring or professional-services need?
+</h2>
+
+<p>
+Start a conversation with Southern Point.
+</p>
+
+</div>
+
+
+<div class="contact-actions">
+
+<a
+class="btn btn-red"
+href="https://docs.google.com/forms/d/e/1FAIpQLSfFJkCIGUUAJHneKtaJLAcF2x1qYCsEdjBRy3Uexwae7a0xTA/viewform"
+target="_blank">
+
+Request Talent
+
+</a>
+
+
+<a
+class="email"
+href="mailto:southernpoint.services@gmail.com">
+
+southernpoint.services@gmail.com
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+</main>
+
+
+
+<footer>
+
+<div class="container footer-grid">
+
+<div>
+
+<div class="footer-name">
+SOUTHERN POINT
+</div>
+
+<p>
+Professional Services
+</p>
+
+<p>
+Talent Acquisition · Recruiting · Workforce Solutions
+</p>
+
+</div>
+
+
+<div class="footer-right">
+
+<p>
+Houston, Texas · Serving organizations nationwide
+</p>
+
+<p>
+© 2026 Southern Point. All rights reserved.
+</p>
+
+<p>
+Southern Point is a trade name/brand used by
+DeJaun Henry Jr., Sole Proprietor.
+</p>
+
+</div>
+
+</div>
+
+</footer>
+
+
+</body>
+</html>
