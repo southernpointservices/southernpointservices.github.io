@@ -1,0 +1,1432 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Find Jobs | Southern Point</title>
+
+<meta name="description"
+content="Explore career opportunities through Southern Point. Search jobs by keyword, location, category, and work arrangement.">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    color:#111820;
+    background:#ffffff;
+    line-height:1.6;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+.container{
+    width:92%;
+    max-width:1180px;
+    margin:0 auto;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:#ffffff;
+    border-bottom:1px solid #e7eaed;
+}
+
+.nav{
+    min-height:86px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:30px;
+}
+
+.brand{
+    display:flex;
+    align-items:center;
+    flex-shrink:0;
+}
+
+.brand-logo{
+    display:block;
+    width:200px;
+    max-width:100%;
+    height:auto;
+}
+
+nav{
+    display:flex;
+    align-items:center;
+    gap:25px;
+    font-size:13px;
+    font-weight:700;
+}
+
+nav a{
+    transition:.2s ease;
+}
+
+nav a:hover{
+    color:#0b4f9c;
+}
+
+.nav-cta{
+    background:#0b4f9c;
+    color:#ffffff;
+    padding:12px 18px;
+    font-size:11px;
+    font-weight:800;
+    text-transform:uppercase;
+    letter-spacing:.5px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    padding:85px 0 70px;
+    background:linear-gradient(
+        135deg,
+        #f4f7fa 0%,
+        #ffffff 75%
+    );
+}
+
+.eyebrow{
+    color:#0b4f9c;
+    font-size:11px;
+    font-weight:900;
+    letter-spacing:2.3px;
+    margin-bottom:15px;
+}
+
+.hero h1{
+    font-size:clamp(43px,6vw,72px);
+    line-height:1.03;
+    letter-spacing:-3px;
+    margin-bottom:20px;
+}
+
+.hero h1 span{
+    color:#0b4f9c;
+}
+
+.hero-text{
+    max-width:720px;
+    color:#59656f;
+    font-size:18px;
+}
+
+
+/* =========================
+   SEARCH
+========================= */
+
+.search-box{
+    margin-top:35px;
+    background:#101820;
+    padding:20px;
+    display:grid;
+    grid-template-columns:1.5fr 1fr 1fr auto;
+    gap:10px;
+}
+
+.search-box input,
+.search-box select{
+    width:100%;
+    padding:15px;
+    border:none;
+    outline:none;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:13px;
+}
+
+.search-box button{
+    border:none;
+    background:#c62828;
+    color:#ffffff;
+    padding:0 25px;
+    font-size:11px;
+    font-weight:900;
+    text-transform:uppercase;
+    letter-spacing:.6px;
+    cursor:pointer;
+}
+
+
+/* =========================
+   JOB SECTION
+========================= */
+
+.jobs-section{
+    padding:75px 0 100px;
+}
+
+.section-heading{
+    margin-bottom:35px;
+}
+
+.section-label{
+    color:#0b4f9c;
+    font-size:11px;
+    font-weight:900;
+    letter-spacing:2px;
+    margin-bottom:12px;
+}
+
+.section-heading h2{
+    font-size:clamp(34px,4vw,50px);
+    line-height:1.08;
+    letter-spacing:-1.7px;
+}
+
+.section-heading p{
+    margin-top:12px;
+    color:#6a7680;
+    font-size:14px;
+}
+
+
+/* =========================
+   JOB LAYOUT
+========================= */
+
+.jobs-layout{
+    display:grid;
+    grid-template-columns:220px 1fr;
+    gap:30px;
+}
+
+
+/* =========================
+   FILTERS
+========================= */
+
+.filters{
+    border:1px solid #e0e5e9;
+    padding:25px;
+    height:max-content;
+}
+
+.filters h3{
+    font-size:15px;
+    margin-bottom:18px;
+}
+
+.filter-group{
+    border-top:1px solid #e6eaed;
+    padding:17px 0;
+}
+
+.filter-group:first-of-type{
+    border-top:none;
+}
+
+.filter-group strong{
+    display:block;
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    margin-bottom:10px;
+}
+
+.filter-group label{
+    display:block;
+    font-size:13px;
+    color:#59656f;
+    margin:9px 0;
+}
+
+.filter-group input{
+    margin-right:7px;
+}
+
+
+/* =========================
+   JOB CARDS
+========================= */
+
+.jobs-list{
+    display:grid;
+    gap:15px;
+}
+
+.job-card{
+    border:1px solid #dfe5e9;
+    padding:27px;
+    transition:.2s ease;
+    background:#ffffff;
+}
+
+.job-card:hover{
+    border-color:#0b4f9c;
+    transform:translateY(-2px);
+}
+
+.job-top{
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.job-category{
+    color:#c62828;
+    font-size:10px;
+    font-weight:900;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+.job-card h3{
+    font-size:22px;
+    line-height:1.25;
+    margin:7px 0 5px;
+}
+
+.job-company{
+    color:#0b4f9c;
+    font-size:13px;
+    font-weight:700;
+}
+
+.job-meta{
+    display:flex;
+    flex-wrap:wrap;
+    gap:9px;
+    margin:15px 0;
+}
+
+.job-meta span{
+    background:#f0f3f5;
+    padding:5px 9px;
+    color:#5d6972;
+    font-size:10px;
+    font-weight:800;
+    text-transform:uppercase;
+}
+
+.job-description{
+    color:#65717a;
+    font-size:13px;
+    margin-bottom:18px;
+}
+
+.job-bottom{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:15px;
+}
+
+.job-date{
+    color:#89939b;
+    font-size:11px;
+}
+
+.view-job{
+    color:#0b4f9c;
+    font-size:11px;
+    font-weight:900;
+    text-transform:uppercase;
+    letter-spacing:.5px;
+}
+
+
+/* =========================
+   CATEGORIES
+========================= */
+
+.categories{
+    background:#101820;
+    color:#ffffff;
+    padding:80px 0;
+}
+
+.categories .section-label{
+    color:#dcecff;
+}
+
+.categories h2{
+    font-size:clamp(33px,4vw,50px);
+    line-height:1.08;
+    letter-spacing:-1.7px;
+}
+
+.category-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:12px;
+    margin-top:35px;
+}
+
+.category{
+    border:1px solid #303b44;
+    padding:20px;
+    transition:.2s ease;
+}
+
+.category:hover{
+    border-color:#0b4f9c;
+}
+
+.category strong{
+    display:block;
+    font-size:14px;
+}
+
+.category span{
+    display:block;
+    color:#9faab3;
+    font-size:11px;
+    margin-top:4px;
+}
+
+
+/* =========================
+   JOB ALERTS
+========================= */
+
+.alerts{
+    padding:80px 0;
+    background:#f4f6f8;
+}
+
+.alert-box{
+    display:grid;
+    grid-template-columns:1fr auto;
+    align-items:center;
+    gap:40px;
+}
+
+.alert-box h2{
+    font-size:clamp(30px,4vw,46px);
+    line-height:1.1;
+    letter-spacing:-1.5px;
+}
+
+.alert-box p{
+    color:#606c75;
+    margin-top:12px;
+    max-width:650px;
+}
+
+.btn{
+    display:inline-block;
+    background:#0b4f9c;
+    color:#ffffff;
+    padding:14px 23px;
+    font-size:11px;
+    font-weight:900;
+    text-transform:uppercase;
+    letter-spacing:.7px;
+}
+
+
+/* =========================
+   EMPLOYER CTA
+========================= */
+
+.employer-cta{
+    padding:80px 0;
+}
+
+.employer-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:80px;
+    align-items:center;
+}
+
+.employer-grid h2{
+    font-size:clamp(33px,4vw,50px);
+    line-height:1.08;
+    letter-spacing:-1.7px;
+}
+
+.employer-grid p{
+    color:#5f6b74;
+    margin:18px 0 25px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#090e13;
+    color:#bcc5cc;
+    padding:42px 0;
+    font-size:12px;
+}
+
+.footer-grid{
+    display:flex;
+    justify-content:space-between;
+    gap:50px;
+}
+
+.footer-name{
+    color:#ffffff;
+    font-weight:900;
+    letter-spacing:2px;
+}
+
+.footer-right{
+    max-width:560px;
+    text-align:right;
+    color:#8b97a1;
+}
+
+footer p{
+    margin:4px 0;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:850px){
+
+    nav,
+    .nav-cta{
+        display:none;
+    }
+
+    .brand-logo{
+        width:165px;
+    }
+
+    .search-box{
+        grid-template-columns:1fr;
+    }
+
+    .search-box button{
+        padding:14px;
+    }
+
+    .jobs-layout{
+        grid-template-columns:1fr;
+    }
+
+    .category-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .alert-box,
+    .employer-grid{
+        grid-template-columns:1fr;
+        gap:30px;
+    }
+
+    .footer-grid{
+        flex-direction:column;
+    }
+
+    .footer-right{
+        text-align:left;
+    }
+
+}
+
+@media(max-width:500px){
+
+    .category-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+<div class="container nav">
+
+<a href="index.html" class="brand">
+
+<img
+src="southern-point-logo.png"
+alt="Southern Point Professional Services"
+class="brand-logo">
+
+</a>
+
+
+<nav>
+
+<a href="index.html">
+Home
+</a>
+
+<a href="jobs.html">
+Find Jobs
+</a>
+
+<a href="employers.html">
+Employers
+</a>
+
+<a href="candidates.html">
+Candidates
+</a>
+
+<a href="index.html#services">
+Services
+</a>
+
+<a href="index.html#contact">
+Contact
+</a>
+
+</nav>
+
+
+<a
+class="nav-cta"
+href="mailto:southernpoint.services@gmail.com">
+
+Contact Us
+
+</a>
+
+</div>
+
+</header>
+
+
+
+<main>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+<div class="container">
+
+<div class="eyebrow">
+SOUTHERN POINT CAREERS
+</div>
+
+<h1>
+Find your next <span>opportunity.</span>
+</h1>
+
+<p class="hero-text">
+
+Explore career opportunities across industries,
+locations, and work arrangements through Southern Point.
+
+</p>
+
+
+<div class="search-box">
+
+<input
+type="text"
+placeholder="Job title, keyword, or company">
+
+
+<input
+type="text"
+placeholder="Location">
+
+
+<select>
+
+<option>
+All Categories
+</option>
+
+<option>
+Administrative
+</option>
+
+<option>
+Customer Service
+</option>
+
+<option>
+Finance & Accounting
+</option>
+
+<option>
+Healthcare
+</option>
+
+<option>
+Information Technology
+</option>
+
+<option>
+Engineering
+</option>
+
+<option>
+Sales & Marketing
+</option>
+
+<option>
+Operations
+</option>
+
+</select>
+
+
+<button>
+Search Jobs
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     JOB LISTINGS
+========================= -->
+
+<section class="jobs-section">
+
+<div class="container">
+
+
+<div class="section-heading">
+
+<div class="section-label">
+CURRENT OPPORTUNITIES
+</div>
+
+<h2>
+Explore available positions.
+</h2>
+
+<p>
+Browse current opportunities and discover roles that may match your experience and career goals.
+</p>
+
+</div>
+
+
+
+<div class="jobs-layout">
+
+
+<!-- FILTERS -->
+
+<aside class="filters">
+
+<h3>
+Filter Jobs
+</h3>
+
+
+<div class="filter-group">
+
+<strong>
+Work Arrangement
+</strong>
+
+<label>
+<input type="checkbox">
+Remote
+</label>
+
+<label>
+<input type="checkbox">
+Hybrid
+</label>
+
+<label>
+<input type="checkbox">
+On-site
+</label>
+
+</div>
+
+
+
+<div class="filter-group">
+
+<strong>
+Employment Type
+</strong>
+
+<label>
+<input type="checkbox">
+Full-time
+</label>
+
+<label>
+<input type="checkbox">
+Part-time
+</label>
+
+<label>
+<input type="checkbox">
+Contract
+</label>
+
+<label>
+<input type="checkbox">
+Internship
+</label>
+
+</div>
+
+
+
+<div class="filter-group">
+
+<strong>
+Experience
+</strong>
+
+<label>
+<input type="checkbox">
+Entry Level
+</label>
+
+<label>
+<input type="checkbox">
+Mid Level
+</label>
+
+<label>
+<input type="checkbox">
+Senior Level
+</label>
+
+</div>
+
+</aside>
+
+
+
+<!-- JOBS -->
+
+<div class="jobs-list">
+
+
+<article class="job-card">
+
+<div class="job-top">
+
+<div>
+
+<div class="job-category">
+Technology
+</div>
+
+<h3>
+Software Engineer
+</h3>
+
+<div class="job-company">
+Featured Opportunity
+</div>
+
+</div>
+
+</div>
+
+
+<div class="job-meta">
+
+<span>
+Remote
+</span>
+
+<span>
+Full-time
+</span>
+
+<span>
+Technology
+</span>
+
+</div>
+
+
+<p class="job-description">
+
+Technology opportunity available through Southern Point's career platform.
+
+</p>
+
+
+<div class="job-bottom">
+
+<span class="job-date">
+Opportunity listing
+</span>
+
+<a
+href="#"
+class="view-job">
+
+View Position →
+
+</a>
+
+</div>
+
+</article>
+
+
+
+<article class="job-card">
+
+<div class="job-category">
+Operations
+</div>
+
+<h3>
+Operations Coordinator
+</h3>
+
+<div class="job-company">
+Featured Opportunity
+</div>
+
+
+<div class="job-meta">
+
+<span>
+Houston, TX
+</span>
+
+<span>
+Full-time
+</span>
+
+<span>
+On-site
+</span>
+
+</div>
+
+
+<p class="job-description">
+
+Professional operations opportunity for candidates seeking their next career move.
+
+</p>
+
+
+<div class="job-bottom">
+
+<span class="job-date">
+Opportunity listing
+</span>
+
+<a
+href="#"
+class="view-job">
+
+View Position →
+
+</a>
+
+</div>
+
+</article>
+
+
+
+<article class="job-card">
+
+<div class="job-category">
+Customer Service
+</div>
+
+<h3>
+Customer Service Representative
+</h3>
+
+<div class="job-company">
+Featured Opportunity
+</div>
+
+
+<div class="job-meta">
+
+<span>
+Remote
+</span>
+
+<span>
+Full-time
+</span>
+
+</div>
+
+
+<p class="job-description">
+
+Customer-focused opportunity available through the Southern Point career platform.
+
+</p>
+
+
+<div class="job-bottom">
+
+<span class="job-date">
+Opportunity listing
+</span>
+
+<a
+href="#"
+class="view-job">
+
+View Position →
+
+</a>
+
+</div>
+
+</article>
+
+
+
+<article class="job-card">
+
+<div class="job-category">
+Administrative
+</div>
+
+<h3>
+Administrative Assistant
+</h3>
+
+<div class="job-company">
+Featured Opportunity
+</div>
+
+
+<div class="job-meta">
+
+<span>
+Houston, TX
+</span>
+
+<span>
+Full-time
+</span>
+
+</div>
+
+
+<p class="job-description">
+
+Administrative opportunity supporting professional business operations.
+
+</p>
+
+
+<div class="job-bottom">
+
+<span class="job-date">
+Opportunity listing
+</span>
+
+<a
+href="#"
+class="view-job">
+
+View Position →
+
+</a>
+
+</div>
+
+</article>
+
+
+
+<article class="job-card">
+
+<div class="job-category">
+Sales
+</div>
+
+<h3>
+Business Development Representative
+</h3>
+
+<div class="job-company">
+Featured Opportunity
+</div>
+
+
+<div class="job-meta">
+
+<span>
+Remote
+</span>
+
+<span>
+Full-time
+</span>
+
+</div>
+
+
+<p class="job-description">
+
+Business development opportunity for professionals interested in growth-focused roles.
+
+</p>
+
+
+<div class="job-bottom">
+
+<span class="job-date">
+Opportunity listing
+</span>
+
+<a
+href="#"
+class="view-job">
+
+View Position →
+
+</a>
+
+</div>
+
+</article>
+
+
+
+<article class="job-card">
+
+<div class="job-category">
+Finance
+</div>
+
+<h3>
+Financial Analyst
+</h3>
+
+<div class="job-company">
+Featured Opportunity
+</div>
+
+
+<div class="job-meta">
+
+<span>
+Hybrid
+</span>
+
+<span>
+Full-time
+</span>
+
+</div>
+
+
+<p class="job-description">
+
+Financial services opportunity available through the Southern Point platform.
+
+</p>
+
+
+<div class="job-bottom">
+
+<span class="job-date">
+Opportunity listing
+</span>
+
+<a
+href="#"
+class="view-job">
+
+View Position →
+
+</a>
+
+</div>
+
+</article>
+
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     CATEGORIES
+========================= -->
+
+<section class="categories">
+
+<div class="container">
+
+<div class="section-label">
+BROWSE CAREERS
+</div>
+
+<h2>
+Explore opportunities by industry.
+</h2>
+
+
+<div class="category-grid">
+
+<a href="#" class="category">
+<strong>Technology</strong>
+<span>IT · Software · Engineering</span>
+</a>
+
+<a href="#" class="category">
+<strong>Healthcare</strong>
+<span>Clinical · Medical · Healthcare</span>
+</a>
+
+<a href="#" class="category">
+<strong>Finance</strong>
+<span>Accounting · Banking · Finance</span>
+</a>
+
+<a href="#" class="category">
+<strong>Sales & Marketing</strong>
+<span>Sales · Marketing · Business Development</span>
+</a>
+
+<a href="#" class="category">
+<strong>Operations</strong>
+<span>Operations · Management · Logistics</span>
+</a>
+
+<a href="#" class="category">
+<strong>Administrative</strong>
+<span>Office · Administrative · Support</span>
+</a>
+
+<a href="#" class="category">
+<strong>Engineering</strong>
+<span>Technical · Engineering · Skilled</span>
+</a>
+
+<a href="#" class="category">
+<strong>Customer Service</strong>
+<span>Support · Service · Client Success</span>
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     JOB ALERTS
+========================= -->
+
+<section class="alerts">
+
+<div class="container">
+
+<div class="alert-box">
+
+<div>
+
+<div class="section-label">
+STAY INFORMED
+</div>
+
+<h2>
+Get notified about new opportunities.
+</h2>
+
+<p>
+
+Stay connected with Southern Point as new opportunities become available.
+
+</p>
+
+</div>
+
+
+<a
+href="mailto:southernpoint.services@gmail.com?subject=Southern%20Point%20Job%20Alerts"
+class="btn">
+
+Join Job Alerts
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     EMPLOYER CTA
+========================= -->
+
+<section class="employer-cta">
+
+<div class="container employer-grid">
+
+
+<div>
+
+<div class="section-label">
+EMPLOYERS
+</div>
+
+<h2>
+Looking for qualified talent?
+</h2>
+
+</div>
+
+
+<div>
+
+<p>
+
+Southern Point provides talent acquisition,
+recruiting, workforce, and professional
+support for organizations with hiring needs.
+
+</p>
+
+
+<a
+href="employers.html"
+class="btn">
+
+Employer Services
+
+</a>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+<div class="container footer-grid">
+
+
+<div>
+
+<div class="footer-name">
+SOUTHERN POINT
+</div>
+
+<p>
+Professional Services
+</p>
+
+<p>
+Talent Acquisition · Recruiting · Workforce Solutions
+</p>
+
+<p>
+
+<a
+href="mailto:southernpoint.services@gmail.com"
+style="color:#ffffff;text-decoration:underline;">
+
+southernpoint.services@gmail.com
+
+</a>
+
+</p>
+
+</div>
+
+
+<div class="footer-right">
+
+<p>
+Houston, Texas · Serving organizations nationwide
+</p>
+
+<p>
+© 2026 Southern Point. All rights reserved.
+</p>
+
+<p>
+Southern Point is a trade name/brand used by
+DeJaun Henry Jr., Sole Proprietor.
+</p>
+
+</div>
+
+
+</div>
+
+</footer>
+
+
+</body>
+</html>
+```
