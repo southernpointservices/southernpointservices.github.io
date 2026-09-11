@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact Southern Point | Workforce & Professional Services</title>
+
+<meta name="description" content="Contact Southern Point to find talent, search jobs, submit your resume, or send an organizational or general inquiry.">
+<link rel="canonical" href="https://southernpointllc.com/contact/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Contact Southern Point | Workforce & Professional Services">
+<meta property="og:description" content="Contact Southern Point to find talent, search jobs, submit your resume, or send an organizational or general inquiry.">
+<meta property="og:url" content="https://southernpointllc.com/contact/">
+<meta property="og:site_name" content="Southern Point">
+
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/assets/css/site.css">
+
+<style>
+
+.contact-info{
+    display:flex;
+    flex-wrap:wrap;
+    gap:30px;
+    margin-top:20px;
+}
+
+.contact-info-item{
+    font-size:14px;
+    color:#3A362E;
+}
+
+.contact-info-item strong{
+    display:block;
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:.6px;
+    color:#8C8270;
+    margin-bottom:4px;
+}
+
+.contact-info-item a{
+    color:#B8863E;
+    font-weight:700;
+}
+
+/* =========================
+   "WHAT CAN WE HELP WITH" SELECTOR
+========================= */
+.help-options{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:16px;
+    margin-top:26px;
+}
+
+.help-option{
+    display:block;
+    width:100%;
+    text-align:left;
+    border:1px solid var(--sp-line);
+    background:#ffffff;
+    padding:24px 22px;
+    font-family:inherit;
+    cursor:pointer;
+    transition:border-color .2s ease, background-color .2s ease;
+}
+
+.help-option:hover{
+    border-color:var(--sp-bronze);
+}
+
+.help-option strong{
+    display:block;
+    font-family:var(--font-display);
+    font-size:16px;
+    letter-spacing:-.2px;
+    color:var(--sp-ink);
+    margin-bottom:8px;
+}
+
+.help-option span{
+    display:block;
+    font-size:13px;
+    color:var(--sp-muted);
+    line-height:1.5;
+}
+
+.help-option.active{
+    border-color:var(--sp-bronze-dark);
+    background:var(--sp-cream-2);
+}
+
+/* =========================
+   SUBTLE SUPPORTING PHOTOGRAPHY
+========================= */
+.contact-photo{
+    margin-top:30px;
+    max-width:320px;
+}
+
+.help-option.active strong{
+    color:var(--sp-bronze-dark);
+}
+
+@media(prefers-reduced-motion: reduce){
+    .help-option:hover{ transform:none; }
+}
+
+@media(max-width:980px){
+    .help-options{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:560px){
+    .help-options{grid-template-columns:1fr;}
+}
+
+/* =========================
+   DYNAMIC FORM FIELD GROUPS
+========================= */
+.contact-field-group{
+    display:none;
+}
+
+.contact-field-group.is-visible{
+    display:block;
+    animation:fieldFadeIn .35s ease;
+}
+
+@keyframes fieldFadeIn{
+    from{ opacity:0; transform:translateY(6px); }
+    to{ opacity:1; transform:translateY(0); }
+}
+
+@media(prefers-reduced-motion: reduce){
+    .contact-field-group.is-visible{ animation:none; }
+}
+
+#panel-job h3{
+    font-size:20px;
+    margin-bottom:10px;
+}
+
+#panel-job p{
+    color:var(--sp-muted);
+    font-size:14px;
+    margin-bottom:20px;
+}
+
+#panel-job .btn-row{
+    flex-direction:column;
+    align-items:stretch;
+}
+
+</style>
+</head>
+
+
+<body>
+
+<!-- =========================================================
+     SHARED HEADER — paste verbatim into every page.
+     Fixed, transparent-over-hero header (every page opens on a dark
+     hero/page-hero, so this reads as one composition rather than a
+     separate UI bar) that gains a solid fill on scroll via site.js
+     toggling body.scrolled. Set class="active" on the current
+     top-level nav link (both in .nav-links and .mobile-nav) via
+     assemble.py's header_with_active().
+========================================================= -->
+
+<header class="site-header">
+
+<div class="container site-nav">
+
+<a href="/" class="brand">
+<span class="brand-word"><span class="brand-word-1">SOUTHERN</span><span class="brand-word-2">POINT</span></span>
+</a>
+
+<nav class="nav-links">
+
+<div class="has-mega">
+<a href="/services/">Services</a>
+<div class="mega-panel">
+<div class="mega-inner">
+<div class="mega-label">SERVICES</div>
+<div class="mega-list">
+<a href="/services/staffing-recruiting/" class="mega-row">
+<span class="mega-num">01</span>
+<span class="mega-row-body">
+<span class="mega-row-title">Staffing &amp; Recruiting</span>
+<span class="mega-row-desc">Temporary, temp-to-hire, direct hire, and contract placements.</span>
+</span>
+</a>
+<a href="/services/professional-services/" class="mega-row">
+<span class="mega-num">02</span>
+<span class="mega-row-body">
+<span class="mega-row-title">Professional Services</span>
+<span class="mega-row-desc">Flexible resources for administrative and operational capacity.</span>
+</span>
+</a>
+<a href="/services/workforce-solutions/" class="mega-row">
+<span class="mega-num">03</span>
+<span class="mega-row-body">
+<span class="mega-row-title">Workforce Solutions</span>
+<span class="mega-row-desc">Built around actual organizational requirements, not a fixed model.</span>
+</span>
+</a>
+<a href="/services/specialized-solutions/" class="mega-row">
+<span class="mega-num">04</span>
+<span class="mega-row-body">
+<span class="mega-row-title">Specialized Solutions</span>
+<span class="mega-row-desc">Coordination for requirements that don't fit a standard mold.</span>
+</span>
+</a>
+</div>
+<a href="/services/" class="mega-viewall">View All Services &rarr;</a>
+</div>
+</div>
+</div>
+
+<div class="has-mega">
+<a href="/industries/">Industries</a>
+<div class="mega-panel">
+<div class="mega-inner">
+<div class="mega-label">INDUSTRIES</div>
+<div class="mega-list">
+<a href="/industries/technology/" class="mega-row">
+<span class="mega-num">01</span>
+<span class="mega-row-body">
+<span class="mega-row-title">Technology</span>
+<span class="mega-row-desc">Technical support, systems, and application-support roles.</span>
+</span>
+</a>
+<a href="/industries/healthcare/" class="mega-row">
+<span class="mega-num">02</span>
+<span class="mega-row-body">
+<span class="mega-row-title">Healthcare</span>
+<span class="mega-row-desc">Administrative and operational support — non-clinical roles.</span>
+</span>
+</a>
+<a href="/industries/sales/" class="mega-row">
+<span class="mega-num">03</span>
+<span class="mega-row-body">
+<span class="mega-row-title">Sales</span>
+<span class="mega-row-desc">Business development, account management, and sales talent.</span>
+</span>
+</a>
+<a href="/industries/operations/" class="mega-row">
+<span class="mega-num">04</span>
+<span class="mega-row-body">
+<span class="mega-row-title">Operations</span>
+<span class="mega-row-desc">Coordination and process support that keeps operations running.</span>
+</span>
+</a>
+<a href="/industries/administrative/" class="mega-row">
+<span class="mega-num">05</span>
+<span class="mega-row-body">
+<span class="mega-row-title">Administrative</span>
+<span class="mega-row-desc">Office coordinators and front-office support at every level.</span>
+</span>
+</a>
+</div>
+<a href="/industries/" class="mega-viewall">View All Industries &rarr;</a>
+</div>
+</div>
+</div>
+
+<div class="has-mega">
+<a href="/resources/">Resources</a>
+<div class="mega-panel">
+<div class="mega-inner">
+<div class="mega-label">RESOURCES</div>
+<div class="mega-list">
+<a href="/resources/careers/" class="mega-row">
+<span class="mega-num">01</span>
+<span class="mega-row-body">
+<span class="mega-row-title">Career Resources</span>
+<span class="mega-row-desc">Resume tips, interview prep, and job-search guidance.</span>
+</span>
+</a>
+<a href="/resources/hiring/" class="mega-row">
+<span class="mega-num">02</span>
+<span class="mega-row-body">
+<span class="mega-row-title">Employer Resources</span>
+<span class="mega-row-desc">Practical guidance on hiring decisions and staffing models.</span>
+</span>
+</a>
+<a href="/resources/industry-insights/" class="mega-row">
+<span class="mega-num">03</span>
+<span class="mega-row-body">
+<span class="mega-row-title">Industry Insights</span>
+<span class="mega-row-desc">A closer look at hiring across Southern Point's focus areas.</span>
+</span>
+</a>
+<a href="/faq/" class="mega-row">
+<span class="mega-num">04</span>
+<span class="mega-row-body">
+<span class="mega-row-title">FAQs</span>
+<span class="mega-row-desc">Common questions from employers and job seekers.</span>
+</span>
+</a>
+</div>
+<a href="/resources/" class="mega-viewall">View All Resources &rarr;</a>
+</div>
+</div>
+</div>
+
+<div class="has-mega">
+<a href="/about/">About</a>
+<div class="mega-panel mega-narrow">
+<div class="mega-inner">
+<div class="mega-label">ABOUT</div>
+<div class="mega-list">
+<a href="/about/" class="mega-row">
+<span class="mega-row-body">
+<span class="mega-row-title">Who We Are</span>
+</span>
+</a>
+<a href="/about/#approach" class="mega-row">
+<span class="mega-row-body">
+<span class="mega-row-title">Our Approach</span>
+</span>
+</a>
+<a href="/about/#why" class="mega-row">
+<span class="mega-row-body">
+<span class="mega-row-title">Why Southern Point</span>
+</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+
+</nav>
+
+<div class="nav-right">
+<a class="nav-text-link" href="/jobs.html">Find Jobs</a>
+<a class="active nav-text-link" href="/contact/">Contact</a>
+<a class="nav-cta" href="/request-talent/">Find Talent</a>
+<button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+<span></span><span></span><span></span>
+</button>
+</div>
+
+</div>
+
+</header>
+
+
+<div class="mobile-nav">
+<div class="container mobile-nav-inner">
+
+<div class="mobile-group">
+<a href="/services/" class="mobile-group-label">Services</a>
+<a href="/services/staffing-recruiting/">Staffing &amp; Recruiting</a>
+<a href="/services/professional-services/">Professional Services</a>
+<a href="/services/workforce-solutions/">Workforce Solutions</a>
+<a href="/services/specialized-solutions/">Specialized Solutions</a>
+</div>
+
+<div class="mobile-group">
+<a href="/industries/" class="mobile-group-label">Industries</a>
+<a href="/industries/technology/">Technology</a>
+<a href="/industries/healthcare/">Healthcare</a>
+<a href="/industries/sales/">Sales</a>
+<a href="/industries/operations/">Operations</a>
+<a href="/industries/administrative/">Administrative</a>
+</div>
+
+<div class="mobile-group">
+<a href="/resources/" class="mobile-group-label">Resources</a>
+<a href="/resources/careers/">Career Resources</a>
+<a href="/resources/hiring/">Employer Resources</a>
+<a href="/resources/industry-insights/">Industry Insights</a>
+<a href="/faq/">FAQs</a>
+</div>
+
+<div class="mobile-group">
+<a href="/about/" class="mobile-group-label">About</a>
+<a href="/about/#approach">Our Approach</a>
+<a href="/about/#why">Why Southern Point</a>
+</div>
+
+<div class="mobile-actions">
+<a href="/jobs.html">Find Jobs</a>
+<a href="/contact/">Contact</a>
+<a class="nav-cta" href="/request-talent/">Find Talent</a>
+</div>
+
+</div>
+</div>
+
+
+<!-- Confirmation banner target — JS injects a banner here when a page loads after a form submission -->
+<div id="bannerSlot"></div>
+
+
+<main>
+
+<section class="page-hero">
+<div class="container">
+<div class="eyebrow eyebrow-light">CONTACT</div>
+<h1>Let's Start a Conversation.</h1>
+<p>Tell Southern Point what you need, and we'll follow up directly — usually within one business day.</p>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="section-label">GET STARTED</div>
+<h2 class="section-title">What can we help you with?</h2>
+<p class="section-intro">Choose what best describes why you're reaching out, and the form below will adjust to match.</p>
+
+<div class="help-options" role="group" aria-label="What can we help you with?">
+<button type="button" class="help-option active" data-target="talent">
+<strong>I'm looking for talent</strong>
+<span>Staffing &amp; recruiting for an open role at your organization</span>
+</button>
+<button type="button" class="help-option" data-target="professional">
+<strong>I need professional services</strong>
+<span>Workforce, operational, or specialized resource support</span>
+</button>
+<button type="button" class="help-option" data-target="job">
+<strong>I'm looking for a job</strong>
+<span>Search openings, submit your resume, or set up alerts</span>
+</button>
+<button type="button" class="help-option" data-target="other">
+<strong>Something else</strong>
+<span>General questions or anything not listed above</span>
+</button>
+</div>
+
+</div>
+</section>
+
+<section class="tint">
+<div class="container split">
+
+<div>
+<div class="section-label">REACH US DIRECTLY</div>
+<h2 class="section-title">Southern Point Professional Services</h2>
+<p style="color:#5B5548; margin-bottom:10px;">Southern Point supports employers and job seekers across Technology, Healthcare, Sales, Operations, and Administrative roles nationwide — through staffing and recruiting, professional services, workforce solutions, and specialized resource coordination.</p>
+
+<div class="contact-info">
+<div class="contact-info-item">
+<strong>Email</strong>
+<a href="mailto:southernpoint.services@gmail.com">southernpoint.services@gmail.com</a>
+</div>
+<div class="contact-info-item">
+<strong>Location</strong>
+Houston, Texas &middot; Serving organizations nationwide
+</div>
+</div>
+
+<div class="photo-frame ratio-portrait contact-photo">
+<img class="photo" src="/assets/images/contact-subtle.jpg" alt="A quiet Southern Point workspace detail">
+</div>
+</div>
+
+<div class="form-card">
+
+<div id="panel-job" class="contact-field-group">
+<h3>Looking for your next opportunity?</h3>
+<p>There's never a cost to candidates. Search current openings, submit your resume for general consideration, or sign up for alerts so we reach out when a fit comes up.</p>
+<div class="btn-row">
+<a class="btn btn-red" href="/jobs.html">Find Jobs</a>
+<a class="btn btn-outline" href="/submit-resume/">Submit Resume</a>
+<a class="btn btn-outline" href="/job-alerts/">Job Alerts</a>
+</div>
+</div>
+
+<form
+id="contactForm"
+action="https://formsubmit.co/southernpoint.services@gmail.com"
+method="POST">
+
+<input type="hidden" name="_subject" id="contactSubject" value="Talent Request — Southern Point Contact Form">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_next" value="https://southernpointllc.com/contact/?contacted=1">
+<input type="text" name="_honey" class="honey" tabindex="-1" autocomplete="off">
+<input type="hidden" name="Inquiry Type" id="inquiryTypeField" value="I'm looking for talent">
+
+<div class="form-row">
+<div>
+<label class="form-label first">Full Name</label>
+<input class="form-input" type="text" name="Name" required>
+</div>
+<div>
+<label class="form-label first">Email</label>
+<input class="form-input" type="email" name="Email" required>
+</div>
+</div>
+
+<div id="group-orgfields" class="contact-field-group is-visible">
+<div class="form-row">
+<div>
+<label class="form-label">Organization Name</label>
+<input class="form-input" type="text" name="Organization Name">
+</div>
+<div>
+<label class="form-label">Phone</label>
+<input class="form-input" type="tel" name="Phone">
+</div>
+</div>
+</div>
+
+<div id="group-orgtype" class="contact-field-group">
+<label class="form-label">Organization Type</label>
+<select class="form-select" name="Organization Type">
+<option value="">Select one</option>
+<option>Government / Public Sector</option>
+<option>Prime Contractor</option>
+<option>Healthcare Organization</option>
+<option>Technology Organization</option>
+<option>Commercial / Enterprise</option>
+<option>Other Institutional Organization</option>
+</select>
+</div>
+
+<label class="form-label" id="contactMessageLabel">Message</label>
+<textarea class="form-textarea" id="contactMessage" name="Message" rows="5" required placeholder="Tell us about the role you're hiring for, timeline, and any details that would help."></textarea>
+
+<button type="submit" class="btn btn-block">Send Message</button>
+
+<p class="form-note">Southern Point typically responds within one business day.</p>
+
+</form>
+
+</div>
+
+</div>
+</section>
+
+<script>
+(function(){
+    var options = document.querySelectorAll(".help-option");
+    var form = document.getElementById("contactForm");
+    var panelJob = document.getElementById("panel-job");
+    var groupOrgFields = document.getElementById("group-orgfields");
+    var groupOrgType = document.getElementById("group-orgtype");
+    var subjectField = document.getElementById("contactSubject");
+    var inquiryTypeField = document.getElementById("inquiryTypeField");
+    var messageField = document.getElementById("contactMessage");
+
+    var CONFIG = {
+        talent: {
+            label: "I'm looking for talent",
+            subject: "Talent Request — Southern Point Contact Form",
+            placeholder: "Tell us about the role you're hiring for, timeline, and any details that would help.",
+            showOrgFields: true,
+            showOrgType: false
+        },
+        professional: {
+            label: "I need professional services",
+            subject: "Professional Services Inquiry — Southern Point Contact Form",
+            placeholder: "Tell us what kind of support your organization needs — workforce, operational, or specialized resources.",
+            showOrgFields: true,
+            showOrgType: true
+        },
+        other: {
+            label: "Something else",
+            subject: "General Inquiry — Southern Point Contact Form",
+            placeholder: "How can we help?",
+            showOrgFields: false,
+            showOrgType: false
+        }
+    };
+
+    function setGroupVisible(el, visible){
+        if(!el) return;
+        if(visible){
+            el.style.display = "block";
+            el.classList.add("is-visible");
+        }else{
+            el.style.display = "none";
+            el.classList.remove("is-visible");
+        }
+    }
+
+    function select(target){
+        options.forEach(function(opt){
+            opt.classList.toggle("active", opt.getAttribute("data-target") === target);
+        });
+
+        if(target === "job"){
+            setGroupVisible(panelJob, true);
+            if(form) form.style.display = "none";
+            return;
+        }
+
+        setGroupVisible(panelJob, false);
+        if(form) form.style.display = "block";
+
+        var cfg = CONFIG[target] || CONFIG.other;
+        setGroupVisible(groupOrgFields, cfg.showOrgFields);
+        setGroupVisible(groupOrgType, cfg.showOrgType);
+        if(subjectField) subjectField.value = cfg.subject;
+        if(inquiryTypeField) inquiryTypeField.value = cfg.label;
+        if(messageField) messageField.placeholder = cfg.placeholder;
+    }
+
+    options.forEach(function(opt){
+        opt.addEventListener("click", function(){
+            select(opt.getAttribute("data-target"));
+        });
+    });
+})();
+</script>
+
+</main>
+
+<footer class="site-footer">
+
+<div class="container footer-top">
+
+<div>
+<div class="footer-brand">
+<div class="footer-brand-name"><span class="footer-brand-1">SOUTHERN</span> <span class="footer-brand-2">POINT</span></div>
+</div>
+<p class="footer-tagline">Workforce. Professional Services. Solutions. Southern Point helps organizations access the people, support, and resources they need to move forward — based in Houston, Texas, serving organizations nationwide.</p>
+</div>
+
+<div class="footer-col">
+<h4>Services</h4>
+<a href="/services/staffing-recruiting/">Staffing &amp; Recruiting</a>
+<a href="/services/professional-services/">Professional Services</a>
+<a href="/services/workforce-solutions/">Workforce Solutions</a>
+<a href="/services/specialized-solutions/">Specialized Solutions</a>
+</div>
+
+<div class="footer-col">
+<h4>Industries</h4>
+<a href="/industries/technology/">Technology</a>
+<a href="/industries/healthcare/">Healthcare</a>
+<a href="/industries/sales/">Sales</a>
+<a href="/industries/operations/">Operations</a>
+<a href="/industries/administrative/">Administrative</a>
+</div>
+
+<div class="footer-col">
+<h4>Company</h4>
+<a href="/about/">About</a>
+<a href="/about/#approach">Our Approach</a>
+<a href="/contact/">Contact</a>
+</div>
+
+<div class="footer-col">
+<h4>Resources</h4>
+<a href="/resources/careers/">Career Resources</a>
+<a href="/resources/hiring/">Employer Resources</a>
+<a href="/resources/industry-insights/">Industry Insights</a>
+<a href="/faq/">FAQs</a>
+</div>
+
+<div class="footer-col">
+<h4>For Candidates</h4>
+<a href="/jobs.html">Find Jobs</a>
+<a href="/submit-resume/">Submit Resume</a>
+<a href="/job-alerts/">Job Alerts</a>
+<a href="/job-seekers/resources/">Candidate Resources</a>
+</div>
+
+<div class="footer-col">
+<h4>Legal</h4>
+<a href="/privacy/">Privacy Policy</a>
+<a href="/terms/">Terms of Use</a>
+<a href="/accessibility/">Accessibility</a>
+</div>
+
+</div>
+
+<div class="container footer-bottom">
+<div>© 2026 Southern Point. All rights reserved. Southern Point is a trade name/brand used by DeJaun Henry Jr., Sole Proprietor.</div>
+<div class="footer-legal-links">
+<a href="mailto:southernpoint.services@gmail.com">southernpoint.services@gmail.com</a>
+<span>Houston, Texas &middot; Serving organizations nationwide</span>
+</div>
+</div>
+
+</footer>
+
+<script src="/assets/js/site.js"></script>
+
+
+</body>
+</html>

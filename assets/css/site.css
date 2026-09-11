@@ -1,0 +1,1369 @@
+/* =====================================================================
+   SOUTHERN POINT — BRAND SYSTEM
+   Palette: Midnight (dark ground) / Burgundy (secondary accent) /
+   Bronze (primary accent + CTA) / Cream (light ground). Display serif
+   (Fraunces) for headlines paired with Inter for everything else.
+   One stylesheet for the whole site — every page inherits from here.
+===================================================================== */
+
+:root{
+    --sp-midnight:       #15171E;
+    --sp-midnight-2:     #1E212B;
+    --sp-near-black:     #0F1015;
+    --sp-line-dark:      #33323A;
+
+    --sp-burgundy:       #6E2436;
+    --sp-burgundy-dark:  #551B29;
+
+    --sp-bronze:         #B8863E;
+    --sp-bronze-dark:    #96702F;
+    --sp-bronze-light:   #D8B67A;
+
+    --sp-cream:          #F3EEE3;
+    --sp-cream-2:        #EAE1CD;
+
+    --sp-ink:            #1C1A16;
+    --sp-muted:          #5B5548;
+    --sp-muted-2:        #8C8270;
+    --sp-line:           #E2D9C4;
+    --sp-white:          #FFFFFF;
+
+    --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+    --font-body: 'Inter', Arial, Helvetica, sans-serif;
+}
+
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:var(--font-body);
+    color:var(--sp-ink);
+    background:var(--sp-white);
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+ul{
+    list-style:none;
+}
+
+.container{
+    width:92%;
+    max-width:1180px;
+    margin:0 auto;
+}
+
+.container-narrow{
+    width:92%;
+    max-width:840px;
+    margin:0 auto;
+}
+
+
+/* =========================
+   TYPOGRAPHY
+========================= */
+
+.eyebrow{
+    display:inline-block;
+    color:var(--sp-bronze-dark);
+    font-family:var(--font-body);
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:2.6px;
+    text-transform:uppercase;
+    margin-bottom:16px;
+}
+
+.eyebrow-light{
+    color:var(--sp-bronze-light);
+}
+
+h1, h2, h3, h4{
+    font-family:var(--font-display);
+    font-weight:600;
+    letter-spacing:-.3px;
+    color:inherit;
+}
+
+.page-hero h1{
+    font-size:clamp(44px,6vw,76px);
+    line-height:1.03;
+    letter-spacing:-2px;
+    margin-bottom:24px;
+}
+
+.section-label{
+    display:inline-block;
+    color:var(--sp-bronze-dark);
+    font-family:var(--font-body);
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:2.4px;
+    text-transform:uppercase;
+    margin-bottom:14px;
+}
+
+.section-title{
+    font-size:clamp(32px,4vw,54px);
+    line-height:1.1;
+    letter-spacing:-1.2px;
+    margin-bottom:22px;
+}
+
+.section-intro{
+    color:var(--sp-muted);
+    font-size:17px;
+    line-height:1.6;
+    max-width:700px;
+}
+
+/* Large standalone editorial statement — a typography-led section
+   used in place of a card grid when the point is the words themselves. */
+.statement-xl{
+    font-family:var(--font-display);
+    font-size:clamp(28px,4.2vw,52px);
+    line-height:1.18;
+    letter-spacing:-1px;
+    max-width:920px;
+}
+
+.statement-xl .accent{
+    color:var(--sp-bronze);
+}
+
+.dark .statement-xl .accent{
+    color:var(--sp-bronze-light);
+}
+
+.dark .eyebrow,
+.dark .section-label{
+    color:var(--sp-bronze-light);
+}
+
+.dark .section-title,
+.dark h1, .dark h2, .dark h3{
+    color:#ffffff;
+}
+
+.dark p{
+    color:#CFC9BB;
+}
+
+.serif{
+    font-family:var(--font-display);
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+    height:52px;
+    padding:0 30px;
+    background:var(--sp-bronze);
+    border:1px solid var(--sp-bronze);
+    color:var(--sp-midnight);
+    font-family:var(--font-body);
+    font-size:12.5px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:1.2px;
+    transition:transform .25s cubic-bezier(.2,.7,.3,1), background-color .2s ease, border-color .2s ease, color .2s ease, box-shadow .25s ease;
+    cursor:pointer;
+}
+
+.btn:hover{
+    background:var(--sp-bronze-dark);
+    border-color:var(--sp-bronze-dark);
+    color:#ffffff;
+    transform:translateY(-1px);
+}
+
+.btn:focus-visible{
+    outline:2px solid var(--sp-bronze-dark);
+    outline-offset:3px;
+}
+
+@media(prefers-reduced-motion: reduce){
+    .btn:hover{ transform:none; }
+}
+
+.btn-outline{
+    background:transparent;
+    color:var(--sp-bronze-dark);
+}
+
+.btn-outline:hover{
+    background:var(--sp-bronze);
+    color:var(--sp-midnight);
+}
+
+.btn-outline-white{
+    background:transparent;
+    color:#ffffff;
+    border-color:rgba(255,255,255,.55);
+}
+
+.btn-outline-white:hover{
+    background:#ffffff;
+    color:var(--sp-midnight);
+    border-color:#ffffff;
+}
+
+.btn-red{
+    background:var(--sp-burgundy);
+    border-color:var(--sp-burgundy);
+    color:#ffffff;
+}
+
+.btn-red:hover{
+    background:var(--sp-burgundy-dark);
+    border-color:var(--sp-burgundy-dark);
+    color:#ffffff;
+}
+
+.btn-block{
+    display:flex;
+    width:100%;
+    text-align:center;
+}
+
+.btn-row{
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+}
+
+
+/* =========================
+   HEADER / NAV
+   Fixed, transparent header that sits directly over every page's
+   dark opening hero — header and hero read as one composition, not
+   a separate UI bar stacked above content. Gains a solid fill and a
+   hairline border only once the page scrolls (site.js toggles
+   body.scrolled). Because the header is only ever transparent-over-
+   dark or solid-dark, its type is a single light-on-dark treatment
+   throughout — no light/dark variants to coordinate.
+========================= */
+
+.site-header{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index:1000;
+    background:transparent;
+    border-bottom:1px solid transparent;
+    transition:background-color .35s ease, border-color .35s ease, box-shadow .35s ease;
+}
+
+body.scrolled .site-header{
+    background:var(--sp-midnight);
+    border-bottom-color:rgba(255,255,255,.08);
+    box-shadow:0 12px 30px rgba(0,0,0,.18);
+}
+
+.site-nav{
+    min-height:112px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:40px;
+    transition:min-height .35s ease;
+}
+
+body.scrolled .site-nav{
+    min-height:78px;
+}
+
+.brand{
+    display:flex;
+    align-items:center;
+    flex-shrink:0;
+}
+
+.brand-word{
+    display:flex;
+    align-items:baseline;
+    gap:7px;
+    font-family:var(--font-display);
+    white-space:nowrap;
+}
+
+.brand-word-1{
+    font-weight:500;
+    font-size:15px;
+    letter-spacing:2.5px;
+    color:#ffffff;
+    opacity:.82;
+}
+
+.brand-word-2{
+    font-weight:700;
+    font-size:21px;
+    letter-spacing:0;
+    color:#ffffff;
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:38px;
+    font-size:13px;
+    font-weight:600;
+}
+
+.nav-links > .has-mega > a{
+    position:relative;
+    padding:8px 0;
+    color:#EDE8DC;
+    transition:color .2s ease;
+    white-space:nowrap;
+}
+
+.nav-links > .has-mega > a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    right:100%;
+    bottom:4px;
+    height:1px;
+    background:var(--sp-bronze-light);
+    transition:right .25s cubic-bezier(.2,.7,.3,1);
+}
+
+.nav-links > .has-mega > a:hover,
+.nav-links > .has-mega > a.active,
+.has-mega.mega-open > a{
+    color:#ffffff;
+}
+
+.nav-links > .has-mega > a:hover::after,
+.nav-links > .has-mega > a.active::after,
+.has-mega.mega-open > a::after{
+    right:0;
+}
+
+.nav-right{
+    display:flex;
+    align-items:center;
+    gap:28px;
+    flex-shrink:0;
+}
+
+.nav-text-link{
+    font-size:13px;
+    font-weight:600;
+    color:#C7C1B3;
+    white-space:nowrap;
+    transition:color .2s ease;
+}
+
+.nav-text-link:hover,
+.nav-text-link.active{
+    color:#ffffff;
+}
+
+.nav-cta{
+    display:inline-block;
+    border:1px solid rgba(255,255,255,.55);
+    color:#ffffff;
+    padding:11px 22px;
+    font-size:11px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:1.2px;
+    white-space:nowrap;
+    transition:background-color .2s ease, border-color .2s ease, color .2s ease;
+}
+
+.nav-cta:hover{
+    background:var(--sp-bronze);
+    border-color:var(--sp-bronze);
+    color:var(--sp-midnight);
+}
+
+.nav-toggle{
+    display:none;
+    position:relative;
+    width:26px;
+    height:18px;
+    background:none;
+    border:0;
+    cursor:pointer;
+    padding:0;
+    flex-shrink:0;
+}
+
+.nav-toggle span{
+    position:absolute;
+    left:0;
+    width:100%;
+    height:2px;
+    background:#ffffff;
+    transition:transform .25s ease, opacity .2s ease, top .25s ease;
+}
+
+.nav-toggle span:nth-child(1){ top:0; }
+.nav-toggle span:nth-child(2){ top:8px; }
+.nav-toggle span:nth-child(3){ top:16px; }
+
+body.nav-open .nav-toggle span:nth-child(1){ top:8px; transform:rotate(45deg); }
+body.nav-open .nav-toggle span:nth-child(2){ opacity:0; }
+body.nav-open .nav-toggle span:nth-child(3){ top:8px; transform:rotate(-45deg); }
+
+@media(prefers-reduced-motion: reduce){
+    .site-header,
+    .site-nav,
+    .nav-toggle span{
+        transition:none;
+    }
+}
+
+/* ---- Mega menus ----
+   Full editorial panels (numbered rows + short description) in place
+   of a generic browser-style dropdown — reuses the same numbered-list
+   language established across the rest of the site. */
+
+.has-mega{
+    position:relative;
+}
+
+.mega-panel{
+    display:none;
+    position:absolute;
+    top:100%;
+    left:50%;
+    transform:translateX(-50%);
+    padding-top:20px;
+    z-index:1200;
+}
+
+.has-mega:hover .mega-panel,
+.has-mega:focus-within .mega-panel{
+    display:block;
+}
+
+.mega-inner{
+    background:var(--sp-midnight-2);
+    border-top:2px solid var(--sp-bronze);
+    box-shadow:0 24px 48px rgba(0,0,0,.3);
+    min-width:440px;
+    padding:34px 38px;
+}
+
+.mega-panel.mega-narrow .mega-inner{
+    min-width:240px;
+}
+
+.mega-label{
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:1.4px;
+    text-transform:uppercase;
+    color:var(--sp-bronze-light);
+    margin-bottom:16px;
+}
+
+.mega-list{
+    display:flex;
+    flex-direction:column;
+}
+
+.mega-row{
+    display:grid;
+    grid-template-columns:26px 1fr;
+    gap:16px;
+    padding:14px 0;
+    border-top:1px solid rgba(255,255,255,.08);
+    color:inherit;
+    transition:background-color .15s ease;
+}
+
+.mega-panel.mega-narrow .mega-row{
+    grid-template-columns:1fr;
+}
+
+.mega-row:first-child{
+    border-top:none;
+}
+
+.mega-num{
+    font-family:var(--font-display);
+    font-size:13px;
+    color:var(--sp-bronze);
+    padding-top:2px;
+}
+
+.mega-row-title{
+    display:block;
+    font-family:var(--font-display);
+    font-size:16px;
+    color:#ffffff;
+    transition:color .15s ease;
+}
+
+.mega-row-desc{
+    display:block;
+    font-size:12.5px;
+    color:#B7AF9D;
+    margin-top:3px;
+    max-width:280px;
+}
+
+.mega-row:hover .mega-row-title{
+    color:var(--sp-bronze-light);
+}
+
+.mega-viewall{
+    display:inline-block;
+    margin-top:20px;
+    padding-top:18px;
+    border-top:1px solid rgba(255,255,255,.08);
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:.6px;
+    text-transform:uppercase;
+    color:var(--sp-bronze-light);
+}
+
+
+/* =========================
+   BREADCRUMB
+========================= */
+
+.breadcrumb{
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:.4px;
+    text-transform:uppercase;
+    color:var(--sp-bronze-light);
+    margin-bottom:18px;
+}
+
+.breadcrumb a{
+    color:var(--sp-bronze-light);
+}
+
+.breadcrumb a:hover{
+    color:#ffffff;
+}
+
+.breadcrumb span{
+    margin:0 6px;
+    opacity:.6;
+}
+
+.breadcrumb.on-light{
+    color:var(--sp-bronze-dark);
+}
+
+.breadcrumb.on-light a{
+    color:var(--sp-muted);
+}
+
+
+/* =========================
+   SECTIONS / LAYOUT PATTERNS
+========================= */
+
+section{
+    padding:118px 0;
+}
+
+.section-tight{
+    padding:64px 0;
+}
+
+.dark{
+    background:var(--sp-midnight);
+    color:#ffffff;
+}
+
+.tint{
+    background:var(--sp-cream);
+}
+
+.split{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:80px;
+    align-items:center;
+}
+
+.split-wide{
+    display:grid;
+    grid-template-columns:1.15fr .85fr;
+    gap:80px;
+    align-items:center;
+}
+
+.grid-2{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.grid-3{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.grid-4{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.grid-5{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:16px;
+}
+
+.divider-rule{
+    width:64px;
+    height:3px;
+    background:var(--sp-bronze);
+    margin:0 0 22px;
+}
+
+.divider-rule.center{
+    margin-left:auto;
+    margin-right:auto;
+}
+
+
+/* =========================
+   HERO (interior pages)
+========================= */
+
+.page-hero{
+    background:var(--sp-midnight);
+    color:#ffffff;
+    padding:200px 0 72px;
+}
+
+@media(max-width:980px){
+    .page-hero{
+        padding:150px 0 60px;
+    }
+}
+
+.page-hero p{
+    color:#CFC9BB;
+    max-width:700px;
+    font-size:17px;
+}
+
+.page-hero.tint-hero{
+    background:linear-gradient(135deg,var(--sp-cream) 0%,#ffffff 72%);
+    color:var(--sp-ink);
+}
+
+.page-hero.tint-hero p{
+    color:var(--sp-muted);
+}
+
+.page-hero.tint-hero .eyebrow{
+    color:var(--sp-bronze-dark);
+}
+
+
+/* =========================
+   PHOTOGRAPHY
+   Real <img> elements, sized and positioned exactly as the final
+   photography will sit. No decorative treatment of any kind — the
+   image IS the design element. Until real photography is supplied
+   each slot shows a flat neutral placeholder (see IMAGE-MANIFEST.md)
+   that is deliberately plain rather than part of the visual language.
+========================= */
+
+.photo{
+    display:block;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center;
+}
+
+.photo-frame{
+    position:relative;
+    overflow:hidden;
+    background:var(--sp-cream-2);
+}
+
+.photo-frame.ratio-portrait{ aspect-ratio:4/5; }
+.photo-frame.ratio-square{ aspect-ratio:1; }
+.photo-frame.ratio-landscape{ aspect-ratio:3/2; }
+.photo-frame.ratio-wide{ aspect-ratio:2/1; }
+
+.photo-frame.bleed-right{
+    height:100%;
+    min-height:460px;
+}
+
+@media(max-width:850px){
+    .photo-frame.bleed-right{ min-height:320px; aspect-ratio:4/5; }
+}
+
+
+/* =========================
+   EDITORIAL LIST
+   Replaces card grids for services / resources / capability lists —
+   a numbered, full-width row divided by a thin rule rather than a
+   boxed container. This is the default way Southern Point presents
+   a set of items; a card is the exception, not the primitive.
+========================= */
+
+.editorial-list{
+    border-top:1px solid var(--sp-line-dark);
+}
+
+.editorial-row{
+    display:grid;
+    grid-template-columns:110px 1fr;
+    gap:32px;
+    padding:40px 0;
+    border-bottom:1px solid var(--sp-line-dark);
+}
+
+.editorial-row .row-num{
+    font-family:var(--font-display);
+    font-size:15px;
+    font-weight:600;
+    color:var(--sp-bronze);
+    letter-spacing:.5px;
+    padding-top:4px;
+}
+
+.editorial-row h3{
+    font-size:23px;
+    letter-spacing:-.3px;
+    margin-bottom:10px;
+}
+
+.editorial-row p{
+    color:var(--sp-muted);
+    font-size:15px;
+    max-width:600px;
+    margin-bottom:14px;
+}
+
+.editorial-row a.row-link{
+    display:inline-block;
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:.4px;
+    color:var(--sp-burgundy);
+}
+
+.editorial-row:hover .row-num{
+    color:var(--sp-bronze-dark);
+}
+
+.dark .editorial-list,
+.dark .editorial-row{
+    border-color:var(--sp-line-dark);
+}
+
+@media(max-width:700px){
+    .editorial-row{grid-template-columns:1fr; gap:10px; padding:30px 0;}
+}
+
+
+/* =========================
+   CARDS
+   Used sparingly now — forms, functional job listings, and other
+   places that genuinely need visual containment. Not the default
+   building block for presenting services, values, or content lists.
+========================= */
+
+.card{
+    padding:34px;
+    border:1px solid var(--sp-line);
+    background:#ffffff;
+    transition:border-color .25s ease;
+}
+
+.card:hover{
+    border-color:var(--sp-bronze);
+}
+
+.card-number{
+    color:var(--sp-burgundy);
+    font-family:var(--font-display);
+    font-size:15px;
+    font-weight:600;
+    letter-spacing:.5px;
+}
+
+/* ---------------------------------------------------------------------
+   Scroll reveal — subtle fade/slide-in applied by site.js to cards,
+   panels, and other component blocks as they enter the viewport.
+   prefers-reduced-motion fully disables the effect: content renders
+   in its final state immediately, no transition at all.
+--------------------------------------------------------------------- */
+.reveal{
+    opacity:0;
+    transform:translateY(22px);
+    transition:opacity .7s cubic-bezier(.2,.7,.3,1), transform .7s cubic-bezier(.2,.7,.3,1);
+}
+
+.reveal.reveal-in{
+    opacity:1;
+    transform:translateY(0);
+}
+
+@media(prefers-reduced-motion: reduce){
+    .reveal{
+        opacity:1;
+        transform:none;
+        transition:none;
+    }
+}
+
+.card h3{
+    font-size:20px;
+    margin:20px 0 11px;
+}
+
+.card p{
+    color:var(--sp-muted);
+    font-size:14px;
+}
+
+.dark .card{
+    background:var(--sp-midnight-2);
+    border-color:var(--sp-line-dark);
+}
+
+.dark .card p{
+    color:#C7C1B3;
+}
+
+
+/* =========================
+   PROCESS STEPS
+========================= */
+
+.process-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:30px;
+    margin-top:15px;
+}
+
+.step{
+    border-top:2px solid var(--sp-bronze);
+    padding-top:20px;
+}
+
+.step-number{
+    color:var(--sp-burgundy);
+    font-family:var(--font-display);
+    font-weight:600;
+    font-size:15px;
+}
+
+.step h3{
+    margin:12px 0 8px;
+    font-size:17px;
+}
+
+.step p{
+    color:var(--sp-muted);
+    font-size:14px;
+}
+
+.dark .step p{
+    color:#C7C1B3;
+}
+
+
+/* =========================
+   STATS
+========================= */
+
+.stats{
+    display:flex;
+    gap:35px;
+    flex-wrap:wrap;
+    margin-top:10px;
+}
+
+.stat{
+    border-left:3px solid var(--sp-bronze);
+    padding-left:13px;
+}
+
+.stat strong{
+    display:block;
+    font-family:var(--font-display);
+    font-size:19px;
+}
+
+.stat span{
+    font-size:11px;
+    color:var(--sp-muted-2);
+}
+
+.stat-big{
+    font-family:var(--font-display);
+    font-size:clamp(46px,6vw,84px);
+    line-height:1;
+    color:var(--sp-bronze);
+}
+
+
+/* =========================
+   FAQ ACCORDION
+========================= */
+
+.faq-item{
+    border-top:1px solid var(--sp-line);
+}
+
+.faq-item:last-child{
+    border-bottom:1px solid var(--sp-line);
+}
+
+.faq-question{
+    width:100%;
+    background:none;
+    border:0;
+    text-align:left;
+    padding:22px 0;
+    font-size:16px;
+    font-weight:700;
+    font-family:var(--font-body);
+    color:var(--sp-ink);
+    cursor:pointer;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+}
+
+.faq-icon{
+    flex-shrink:0;
+    width:22px;
+    height:22px;
+    border:1px solid var(--sp-bronze);
+    color:var(--sp-bronze-dark);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:14px;
+    font-weight:700;
+    transition:.2s ease;
+}
+
+.faq-item.open .faq-icon{
+    background:var(--sp-bronze);
+    color:var(--sp-midnight);
+    transform:rotate(45deg);
+}
+
+.faq-answer{
+    max-height:0;
+    overflow:hidden;
+    transition:max-height .25s ease;
+}
+
+.faq-answer p{
+    color:var(--sp-muted);
+    font-size:14px;
+    padding-bottom:22px;
+    max-width:760px;
+}
+
+.dark .faq-item,
+.dark .faq-item:last-child{
+    border-color:var(--sp-line-dark);
+}
+
+.dark .faq-question{
+    color:#ffffff;
+}
+
+
+/* =========================
+   FORMS
+========================= */
+
+.form-card{
+    background:#ffffff;
+    border:1px solid var(--sp-line);
+    padding:40px;
+}
+
+.form-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:16px;
+}
+
+.form-label{
+    display:block;
+    font-size:11px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:.6px;
+    color:var(--sp-muted);
+    margin:16px 0 6px;
+}
+
+.form-label.first{
+    margin-top:0;
+}
+
+.form-input,
+.form-select,
+.form-textarea{
+    width:100%;
+    border:1px solid var(--sp-line);
+    padding:12px 13px;
+    font-family:var(--font-body);
+    font-size:13px;
+    color:var(--sp-ink);
+    outline:none;
+    background:#ffffff;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus{
+    border-color:var(--sp-bronze);
+}
+
+.form-textarea{
+    resize:vertical;
+}
+
+.form-hint{
+    font-size:11px;
+    color:var(--sp-muted-2);
+    margin-top:5px;
+}
+
+.form-consent{
+    display:flex;
+    align-items:flex-start;
+    gap:8px;
+    font-size:11px;
+    color:var(--sp-muted);
+    margin:20px 0 22px;
+}
+
+.form-consent input{
+    margin-top:3px;
+    flex-shrink:0;
+}
+
+.honey{
+    position:absolute;
+    left:-9999px;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+}
+
+.form-note{
+    font-size:12px;
+    color:var(--sp-muted-2);
+    margin-top:14px;
+}
+
+
+/* =========================
+   CONFIRMATION BANNER
+========================= */
+
+.confirm-banner{
+    background:var(--sp-bronze);
+    color:var(--sp-midnight);
+    text-align:center;
+    padding:14px 20px;
+    font-size:13px;
+    font-weight:700;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.site-footer{
+    background:var(--sp-near-black);
+    color:#B7AF9D;
+    border-top:1px solid rgba(255,255,255,.07);
+    padding-top:88px;
+    font-size:13px;
+}
+
+.footer-top{
+    display:grid;
+    grid-template-columns:1.3fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap:32px;
+    padding-bottom:56px;
+}
+
+.footer-brand{
+    display:flex;
+    align-items:center;
+    margin-bottom:16px;
+}
+
+.footer-brand-name{
+    font-family:var(--font-display);
+    white-space:nowrap;
+}
+
+.footer-brand-1{
+    color:#ffffff;
+    font-weight:500;
+    font-size:14px;
+    letter-spacing:2.5px;
+    opacity:.82;
+}
+
+.footer-brand-2{
+    color:#ffffff;
+    font-weight:700;
+    font-size:18px;
+    letter-spacing:0;
+}
+
+.footer-tagline{
+    color:#8C846F;
+    font-size:13px;
+    line-height:1.65;
+    max-width:280px;
+}
+
+.footer-col h4{
+    color:#ffffff;
+    font-family:var(--font-body);
+    font-size:11px;
+    letter-spacing:1.6px;
+    text-transform:uppercase;
+    margin-bottom:19px;
+}
+
+.footer-col a{
+    display:block;
+    color:#A69E8B;
+    font-size:13.5px;
+    padding:6px 0;
+    transition:.15s ease;
+}
+
+.footer-col a:hover{
+    color:var(--sp-bronze-light);
+}
+
+.footer-bottom{
+    border-top:1px solid #232228;
+    padding:28px 0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+    flex-wrap:wrap;
+    color:#71695A;
+    font-size:12.5px;
+}
+
+.footer-bottom a{
+    color:#71695A;
+}
+
+.footer-bottom a:hover{
+    color:#ffffff;
+}
+
+.footer-legal-links{
+    display:flex;
+    gap:18px;
+    flex-wrap:wrap;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:980px){
+
+    .nav-links,
+    .nav-right .nav-cta,
+    .nav-right .nav-text-link{
+        display:none;
+    }
+
+    .nav-toggle{
+        display:block;
+    }
+
+    .site-nav,
+    body.scrolled .site-nav{
+        min-height:76px;
+    }
+
+    .footer-top{
+        grid-template-columns:1fr 1fr 1fr;
+    }
+}
+
+@media(max-width:850px){
+
+    .split,
+    .split-wide{
+        grid-template-columns:1fr;
+        gap:40px;
+    }
+
+    .grid-3,
+    .grid-4{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .grid-5{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .form-row{
+        grid-template-columns:1fr;
+    }
+
+    section{
+        padding:76px 0;
+    }
+
+    .footer-top{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+@media(max-width:560px){
+
+    .grid-2,
+    .grid-3,
+    .grid-4,
+    .grid-5{
+        grid-template-columns:1fr;
+    }
+
+    .footer-top{
+        grid-template-columns:1fr;
+    }
+
+    .stats{
+        gap:24px;
+    }
+}
+
+
+/* =========================
+   MOBILE NAV PANEL
+   A full-height dark overlay beneath the header bar, which stays
+   visible while open — "Southern Point [X]" — as the persistent top
+   bar; the hamburger itself morphs into a close control (see
+   .nav-toggle above). site.js toggles .nav-open on <body>.
+========================= */
+
+.mobile-nav{
+    display:none;
+}
+
+body.nav-open .mobile-nav{
+    display:block;
+    position:fixed;
+    top:76px;
+    left:0;
+    right:0;
+    bottom:0;
+    background:var(--sp-midnight);
+    z-index:999;
+    overflow-y:auto;
+    padding:4px 0 48px;
+}
+
+body.nav-open{
+    overflow:hidden;
+}
+
+.mobile-nav-inner{
+    display:flex;
+    flex-direction:column;
+}
+
+.mobile-group{
+    padding:26px 0;
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.mobile-group-label{
+    display:block;
+    font-family:var(--font-display);
+    font-size:23px;
+    color:#ffffff;
+    margin-bottom:12px;
+}
+
+.mobile-group a:not(.mobile-group-label){
+    display:block;
+    padding:9px 0;
+    font-size:15px;
+    font-weight:500;
+    color:#C7C1B3;
+}
+
+.mobile-actions{
+    display:flex;
+    flex-direction:column;
+    padding-top:28px;
+}
+
+.mobile-actions a{
+    padding:11px 0;
+    font-size:15px;
+    font-weight:700;
+    color:#ffffff;
+}
+
+.mobile-actions .nav-cta{
+    display:block;
+    margin-top:14px;
+    text-align:center;
+    border-color:rgba(255,255,255,.55);
+}

@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Industries We Serve | Southern Point Staffing</title>
+
+<meta name="description" content="Southern Point provides focused staffing support across five industries: Technology, Healthcare, Sales, Operations, and Administrative.">
+<link rel="canonical" href="https://southernpointllc.com/industries/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Industries We Serve | Southern Point Staffing">
+<meta property="og:description" content="Southern Point provides focused staffing support across five industries: Technology, Healthcare, Sales, Operations, and Administrative.">
+<meta property="og:url" content="https://southernpointllc.com/industries/">
+<meta property="og:site_name" content="Southern Point">
+
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/assets/css/site.css">
+
+<style>
+
+/* =========================
+   INDUSTRY DIRECTORY
+   (same editorial-row language as the homepage industries section)
+========================= */
+.division-list{
+    margin-top:10px;
+    border-top:1px solid var(--sp-line-dark);
+}
+
+.division-row{
+    display:grid;
+    grid-template-columns:90px 1fr auto;
+    gap:30px;
+    align-items:center;
+    padding:32px 0;
+    border-bottom:1px solid var(--sp-line-dark);
+    transition:.2s ease;
+    text-decoration:none;
+    color:inherit;
+}
+
+.division-row:hover{
+    background:rgba(184,134,62,.06);
+}
+
+.division-num{
+    font-family:var(--font-display);
+    font-size:34px;
+    color:var(--sp-bronze);
+}
+
+.division-body h3{
+    font-size:24px;
+    margin-bottom:6px;
+    color:#fff;
+}
+
+.division-body p{
+    color:#C7C1B3;
+    font-size:14px;
+    max-width:560px;
+}
+
+.division-arrow{
+    font-family:var(--font-display);
+    font-size:14px;
+    font-weight:600;
+    color:var(--sp-bronze-light);
+    white-space:nowrap;
+}
+
+@media(max-width:700px){
+    .division-row{grid-template-columns:50px 1fr; row-gap:10px;}
+    .division-arrow{grid-column:2;}
+}
+
+/* =========================
+   FINAL DUAL CTA
+========================= */
+.cta-split{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    position:relative;
+}
+
+.cta-half{
+    padding:70px 60px;
+    text-align:center;
+}
+
+.cta-half:first-child{
+    border-right:1px solid var(--sp-line-dark);
+}
+
+.cta-half h3{
+    font-size:clamp(24px,2.6vw,32px);
+    margin-bottom:16px;
+    color:#fff;
+}
+
+.cta-half p{
+    color:#C7C1B3;
+    max-width:380px;
+    margin:0 auto 24px;
+}
+
+@media(max-width:850px){
+    .cta-split{grid-template-columns:1fr;}
+    .cta-half:first-child{border-right:none; border-bottom:1px solid var(--sp-line-dark);}
+    .cta-half{padding:50px 30px;}
+}
+
+</style>
+</head>
+
+
+<body>
+
+<!-- =========================================================
+     SHARED HEADER — paste verbatim into every page.
+     Fixed, transparent-over-hero header (every page opens on a dark
+     hero/page-hero, so this reads as one composition rather than a
+     separate UI bar) that gains a solid fill on scroll via site.js
+     toggling body.scrolled. Set class="active" on the current
+     top-level nav link (both in .nav-links and .mobile-nav) via
+     assemble.py's header_with_active().
+========================================================= -->
+
+<header class="site-header">
+
+<div class="container site-nav">
+
+<a href="/" class="brand">
+<span class="brand-word"><span class="brand-word-1">SOUTHERN</span><span class="brand-word-2">POINT</span></span>
+</a>
+
+<nav class="nav-links">
+
+<div class="has-mega">
+<a href="/services/">Services</a>
+<div class="mega-panel">
+<div class="mega-inner">
+<div class="mega-label">SERVICES</div>
+<div class="mega-list">
+<a href="/services/staffing-recruiting/" class="mega-row">
+<span class="mega-num">01</span>
+<span class="mega-row-body">
+<span class="mega-row-title">Staffing &amp; Recruiting</span>
+<span class="mega-row-desc">Temporary, temp-to-hire, direct hire, and contract placements.</span>
+</span>
+</a>
+<a href="/services/professional-services/" class="mega-row">
+<span class="mega-num">02</span>
+<span class="mega-row-body">
+<span class="mega-row-title">Professional Services</span>
+<span class="mega-row-desc">Flexible resources for administrative and operational capacity.</span>
+</span>
+</a>
+<a href="/services/workforce-solutions/" class="mega-row">
+<span class="mega-num">03</span>
+<span class="mega-row-body">
+<span class="mega-row-title">Workforce Solutions</span>
+<span class="mega-row-desc">Built around actual organizational requirements, not a fixed model.</span>
+</span>
+</a>
+<a href="/services/specialized-solutions/" class="mega-row">
+<span class="mega-num">04</span>
+<span class="mega-row-body">
+<span class="mega-row-title">Specialized Solutions</span>
+<span class="mega-row-desc">Coordination for requirements that don't fit a standard mold.</span>
+</span>
+</a>
+</div>
+<a href="/services/" class="mega-viewall">View All Services &rarr;</a>
+</div>
+</div>
+</div>
+
+<div class="has-mega">
+<a href="/industries/" class="active">Industries</a>
+<div class="mega-panel">
+<div class="mega-inner">
+<div class="mega-label">INDUSTRIES</div>
+<div class="mega-list">
+<a href="/industries/technology/" class="mega-row">
+<span class="mega-num">01</span>
+<span class="mega-row-body">
+<span class="mega-row-title">Technology</span>
+<span class="mega-row-desc">Technical support, systems, and application-support roles.</span>
+</span>
+</a>
+<a href="/industries/healthcare/" class="mega-row">
+<span class="mega-num">02</span>
+<span class="mega-row-body">
+<span class="mega-row-title">Healthcare</span>
+<span class="mega-row-desc">Administrative and operational support — non-clinical roles.</span>
+</span>
+</a>
+<a href="/industries/sales/" class="mega-row">
+<span class="mega-num">03</span>
+<span class="mega-row-body">
+<span class="mega-row-title">Sales</span>
+<span class="mega-row-desc">Business development, account management, and sales talent.</span>
+</span>
+</a>
+<a href="/industries/operations/" class="mega-row">
+<span class="mega-num">04</span>
+<span class="mega-row-body">
+<span class="mega-row-title">Operations</span>
+<span class="mega-row-desc">Coordination and process support that keeps operations running.</span>
+</span>
+</a>
+<a href="/industries/administrative/" class="mega-row">
+<span class="mega-num">05</span>
+<span class="mega-row-body">
+<span class="mega-row-title">Administrative</span>
+<span class="mega-row-desc">Office coordinators and front-office support at every level.</span>
+</span>
+</a>
+</div>
+<a href="/industries/" class="mega-viewall">View All Industries &rarr;</a>
+</div>
+</div>
+</div>
+
+<div class="has-mega">
+<a href="/resources/">Resources</a>
+<div class="mega-panel">
+<div class="mega-inner">
+<div class="mega-label">RESOURCES</div>
+<div class="mega-list">
+<a href="/resources/careers/" class="mega-row">
+<span class="mega-num">01</span>
+<span class="mega-row-body">
+<span class="mega-row-title">Career Resources</span>
+<span class="mega-row-desc">Resume tips, interview prep, and job-search guidance.</span>
+</span>
+</a>
+<a href="/resources/hiring/" class="mega-row">
+<span class="mega-num">02</span>
+<span class="mega-row-body">
+<span class="mega-row-title">Employer Resources</span>
+<span class="mega-row-desc">Practical guidance on hiring decisions and staffing models.</span>
+</span>
+</a>
+<a href="/resources/industry-insights/" class="mega-row">
+<span class="mega-num">03</span>
+<span class="mega-row-body">
+<span class="mega-row-title">Industry Insights</span>
+<span class="mega-row-desc">A closer look at hiring across Southern Point's focus areas.</span>
+</span>
+</a>
+<a href="/faq/" class="mega-row">
+<span class="mega-num">04</span>
+<span class="mega-row-body">
+<span class="mega-row-title">FAQs</span>
+<span class="mega-row-desc">Common questions from employers and job seekers.</span>
+</span>
+</a>
+</div>
+<a href="/resources/" class="mega-viewall">View All Resources &rarr;</a>
+</div>
+</div>
+</div>
+
+<div class="has-mega">
+<a href="/about/">About</a>
+<div class="mega-panel mega-narrow">
+<div class="mega-inner">
+<div class="mega-label">ABOUT</div>
+<div class="mega-list">
+<a href="/about/" class="mega-row">
+<span class="mega-row-body">
+<span class="mega-row-title">Who We Are</span>
+</span>
+</a>
+<a href="/about/#approach" class="mega-row">
+<span class="mega-row-body">
+<span class="mega-row-title">Our Approach</span>
+</span>
+</a>
+<a href="/about/#why" class="mega-row">
+<span class="mega-row-body">
+<span class="mega-row-title">Why Southern Point</span>
+</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+
+</nav>
+
+<div class="nav-right">
+<a class="nav-text-link" href="/jobs.html">Find Jobs</a>
+<a class="nav-text-link" href="/contact/">Contact</a>
+<a class="nav-cta" href="/request-talent/">Find Talent</a>
+<button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+<span></span><span></span><span></span>
+</button>
+</div>
+
+</div>
+
+</header>
+
+
+<div class="mobile-nav">
+<div class="container mobile-nav-inner">
+
+<div class="mobile-group">
+<a href="/services/" class="mobile-group-label">Services</a>
+<a href="/services/staffing-recruiting/">Staffing &amp; Recruiting</a>
+<a href="/services/professional-services/">Professional Services</a>
+<a href="/services/workforce-solutions/">Workforce Solutions</a>
+<a href="/services/specialized-solutions/">Specialized Solutions</a>
+</div>
+
+<div class="mobile-group">
+<a href="/industries/" class="mobile-group-label">Industries</a>
+<a href="/industries/technology/">Technology</a>
+<a href="/industries/healthcare/">Healthcare</a>
+<a href="/industries/sales/">Sales</a>
+<a href="/industries/operations/">Operations</a>
+<a href="/industries/administrative/">Administrative</a>
+</div>
+
+<div class="mobile-group">
+<a href="/resources/" class="mobile-group-label">Resources</a>
+<a href="/resources/careers/">Career Resources</a>
+<a href="/resources/hiring/">Employer Resources</a>
+<a href="/resources/industry-insights/">Industry Insights</a>
+<a href="/faq/">FAQs</a>
+</div>
+
+<div class="mobile-group">
+<a href="/about/" class="mobile-group-label">About</a>
+<a href="/about/#approach">Our Approach</a>
+<a href="/about/#why">Why Southern Point</a>
+</div>
+
+<div class="mobile-actions">
+<a href="/jobs.html">Find Jobs</a>
+<a href="/contact/">Contact</a>
+<a class="nav-cta" href="/request-talent/">Find Talent</a>
+</div>
+
+</div>
+</div>
+
+
+<!-- Confirmation banner target — JS injects a banner here when a page loads after a form submission -->
+<div id="bannerSlot"></div>
+
+
+<main>
+
+<section class="page-hero">
+<div class="container">
+<div class="eyebrow eyebrow-light">INDUSTRIES WE SERVE</div>
+<h1>Staffing Built Around Your Industry.</h1>
+<p>Southern Point focuses its recruiting and workforce support on five core areas — Technology, Healthcare, Sales, Operations, and Administrative — rather than trying to be a generalist staffing firm for every field. That focus is what lets us actually understand the roles we staff.</p>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="photo-frame ratio-wide">
+<img class="photo" src="/assets/images/industries-hub.jpg" alt="A mixed professional environment representing Southern Point's five focus industries">
+</div>
+</div>
+</section>
+
+<section class="dark">
+<div class="container">
+<div class="section-label" style="color:#D8B67A;">EXPLORE BY INDUSTRY</div>
+<h2 class="section-title" style="color:#fff;">Five focus areas, staffed with real depth.</h2>
+<p class="section-intro" style="color:#C7C1B3;">Each industry page below covers the roles Southern Point commonly staffs, the challenges organizations in that space typically face, and how our process is built to address them.</p>
+<div class="division-list">
+
+<a href="/industries/technology/" class="division-row">
+<div class="division-num">01</div>
+<div class="division-body">
+<h3>Technology</h3>
+<p>Technical support, systems, and application-support roles for technology-driven organizations.</p>
+</div>
+<div class="division-arrow">Explore Technology &rarr;</div>
+</a>
+
+<a href="/industries/healthcare/" class="division-row">
+<div class="division-num">02</div>
+<div class="division-body">
+<h3>Healthcare</h3>
+<p>Administrative and operational staffing support for healthcare organizations — non-clinical roles.</p>
+</div>
+<div class="division-arrow">Explore Healthcare &rarr;</div>
+</a>
+
+<a href="/industries/sales/" class="division-row">
+<div class="division-num">03</div>
+<div class="division-body">
+<h3>Sales</h3>
+<p>Sales development, account management, and business development talent across industries.</p>
+</div>
+<div class="division-arrow">Explore Sales &rarr;</div>
+</a>
+
+<a href="/industries/operations/" class="division-row">
+<div class="division-num">04</div>
+<div class="division-body">
+<h3>Operations</h3>
+<p>Coordination, process, and logistics support that keeps day-to-day operations running.</p>
+</div>
+<div class="division-arrow">Explore Operations &rarr;</div>
+</a>
+
+<a href="/industries/administrative/" class="division-row">
+<div class="division-num">05</div>
+<div class="division-body">
+<h3>Administrative</h3>
+<p>Administrative assistants, office coordinators, and front-office support at every level.</p>
+</div>
+<div class="division-arrow">Explore Administrative &rarr;</div>
+</a>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container split">
+<div>
+<div class="section-label">WHY INDUSTRY FOCUS MATTERS</div>
+<h2 class="section-title">Depth beats a generic candidate pool.</h2>
+<p>A staffing partner that tries to cover every industry equally usually understands none of them well. Southern Point staffs within five focus areas so that sourcing, screening, and candidate conversations are grounded in what the role actually requires — not a one-size-fits-all process.</p>
+</div>
+<div>
+<div class="section-label">DON'T SEE YOUR INDUSTRY?</div>
+<h2 class="section-title">Let's talk about it anyway.</h2>
+<p>If your hiring need falls outside these five areas, reach out — Southern Point may still be able to help, or can point you in a useful direction.</p>
+<a class="btn btn-outline" href="/contact/" style="margin-top:16px;">Contact Southern Point</a>
+</div>
+</div>
+</section>
+
+<section class="dark">
+<div class="cta-split">
+<div class="cta-half">
+<div class="section-label" style="justify-content:center; color:var(--sp-bronze-light);">FOR ORGANIZATIONS</div>
+<h3>Need talent for one of these industries?</h3>
+<p>Tell Southern Point what you're looking for and we'll follow up to discuss next steps.</p>
+<a class="btn btn-red" href="/request-talent/">Request Talent</a>
+</div>
+<div class="cta-half">
+<div class="section-label" style="justify-content:center; color:var(--sp-bronze-light);">FOR CANDIDATES</div>
+<h3>Looking for your next role?</h3>
+<p>Search current openings across all five focus industries.</p>
+<a class="btn btn-outline-white" href="/jobs.html">Find Jobs</a>
+</div>
+</div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+
+<div class="container footer-top">
+
+<div>
+<div class="footer-brand">
+<div class="footer-brand-name"><span class="footer-brand-1">SOUTHERN</span> <span class="footer-brand-2">POINT</span></div>
+</div>
+<p class="footer-tagline">Workforce. Professional Services. Solutions. Southern Point helps organizations access the people, support, and resources they need to move forward — based in Houston, Texas, serving organizations nationwide.</p>
+</div>
+
+<div class="footer-col">
+<h4>Services</h4>
+<a href="/services/staffing-recruiting/">Staffing &amp; Recruiting</a>
+<a href="/services/professional-services/">Professional Services</a>
+<a href="/services/workforce-solutions/">Workforce Solutions</a>
+<a href="/services/specialized-solutions/">Specialized Solutions</a>
+</div>
+
+<div class="footer-col">
+<h4>Industries</h4>
+<a href="/industries/technology/">Technology</a>
+<a href="/industries/healthcare/">Healthcare</a>
+<a href="/industries/sales/">Sales</a>
+<a href="/industries/operations/">Operations</a>
+<a href="/industries/administrative/">Administrative</a>
+</div>
+
+<div class="footer-col">
+<h4>Company</h4>
+<a href="/about/">About</a>
+<a href="/about/#approach">Our Approach</a>
+<a href="/contact/">Contact</a>
+</div>
+
+<div class="footer-col">
+<h4>Resources</h4>
+<a href="/resources/careers/">Career Resources</a>
+<a href="/resources/hiring/">Employer Resources</a>
+<a href="/resources/industry-insights/">Industry Insights</a>
+<a href="/faq/">FAQs</a>
+</div>
+
+<div class="footer-col">
+<h4>For Candidates</h4>
+<a href="/jobs.html">Find Jobs</a>
+<a href="/submit-resume/">Submit Resume</a>
+<a href="/job-alerts/">Job Alerts</a>
+<a href="/job-seekers/resources/">Candidate Resources</a>
+</div>
+
+<div class="footer-col">
+<h4>Legal</h4>
+<a href="/privacy/">Privacy Policy</a>
+<a href="/terms/">Terms of Use</a>
+<a href="/accessibility/">Accessibility</a>
+</div>
+
+</div>
+
+<div class="container footer-bottom">
+<div>© 2026 Southern Point. All rights reserved. Southern Point is a trade name/brand used by DeJaun Henry Jr., Sole Proprietor.</div>
+<div class="footer-legal-links">
+<a href="mailto:southernpoint.services@gmail.com">southernpoint.services@gmail.com</a>
+<span>Houston, Texas &middot; Serving organizations nationwide</span>
+</div>
+</div>
+
+</footer>
+
+<script src="/assets/js/site.js"></script>
+
+
+</body>
+</html>

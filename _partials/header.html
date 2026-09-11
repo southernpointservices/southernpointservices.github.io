@@ -1,0 +1,235 @@
+<!-- =========================================================
+     SHARED HEADER — paste verbatim into every page.
+     Fixed, transparent-over-hero header (every page opens on a dark
+     hero/page-hero, so this reads as one composition rather than a
+     separate UI bar) that gains a solid fill on scroll via site.js
+     toggling body.scrolled. Set class="active" on the current
+     top-level nav link (both in .nav-links and .mobile-nav) via
+     assemble.py's header_with_active().
+========================================================= -->
+
+<header class="site-header">
+
+<div class="container site-nav">
+
+<a href="/" class="brand">
+<span class="brand-word"><span class="brand-word-1">SOUTHERN</span><span class="brand-word-2">POINT</span></span>
+</a>
+
+<nav class="nav-links">
+
+<div class="has-mega">
+<a href="/services/">Services</a>
+<div class="mega-panel">
+<div class="mega-inner">
+<div class="mega-label">SERVICES</div>
+<div class="mega-list">
+<a href="/services/staffing-recruiting/" class="mega-row">
+<span class="mega-num">01</span>
+<span class="mega-row-body">
+<span class="mega-row-title">Staffing &amp; Recruiting</span>
+<span class="mega-row-desc">Temporary, temp-to-hire, direct hire, and contract placements.</span>
+</span>
+</a>
+<a href="/services/professional-services/" class="mega-row">
+<span class="mega-num">02</span>
+<span class="mega-row-body">
+<span class="mega-row-title">Professional Services</span>
+<span class="mega-row-desc">Flexible resources for administrative and operational capacity.</span>
+</span>
+</a>
+<a href="/services/workforce-solutions/" class="mega-row">
+<span class="mega-num">03</span>
+<span class="mega-row-body">
+<span class="mega-row-title">Workforce Solutions</span>
+<span class="mega-row-desc">Built around actual organizational requirements, not a fixed model.</span>
+</span>
+</a>
+<a href="/services/specialized-solutions/" class="mega-row">
+<span class="mega-num">04</span>
+<span class="mega-row-body">
+<span class="mega-row-title">Specialized Solutions</span>
+<span class="mega-row-desc">Coordination for requirements that don't fit a standard mold.</span>
+</span>
+</a>
+</div>
+<a href="/services/" class="mega-viewall">View All Services &rarr;</a>
+</div>
+</div>
+</div>
+
+<div class="has-mega">
+<a href="/industries/">Industries</a>
+<div class="mega-panel">
+<div class="mega-inner">
+<div class="mega-label">INDUSTRIES</div>
+<div class="mega-list">
+<a href="/industries/technology/" class="mega-row">
+<span class="mega-num">01</span>
+<span class="mega-row-body">
+<span class="mega-row-title">Technology</span>
+<span class="mega-row-desc">Technical support, systems, and application-support roles.</span>
+</span>
+</a>
+<a href="/industries/healthcare/" class="mega-row">
+<span class="mega-num">02</span>
+<span class="mega-row-body">
+<span class="mega-row-title">Healthcare</span>
+<span class="mega-row-desc">Administrative and operational support — non-clinical roles.</span>
+</span>
+</a>
+<a href="/industries/sales/" class="mega-row">
+<span class="mega-num">03</span>
+<span class="mega-row-body">
+<span class="mega-row-title">Sales</span>
+<span class="mega-row-desc">Business development, account management, and sales talent.</span>
+</span>
+</a>
+<a href="/industries/operations/" class="mega-row">
+<span class="mega-num">04</span>
+<span class="mega-row-body">
+<span class="mega-row-title">Operations</span>
+<span class="mega-row-desc">Coordination and process support that keeps operations running.</span>
+</span>
+</a>
+<a href="/industries/administrative/" class="mega-row">
+<span class="mega-num">05</span>
+<span class="mega-row-body">
+<span class="mega-row-title">Administrative</span>
+<span class="mega-row-desc">Office coordinators and front-office support at every level.</span>
+</span>
+</a>
+</div>
+<a href="/industries/" class="mega-viewall">View All Industries &rarr;</a>
+</div>
+</div>
+</div>
+
+<div class="has-mega">
+<a href="/resources/">Resources</a>
+<div class="mega-panel">
+<div class="mega-inner">
+<div class="mega-label">RESOURCES</div>
+<div class="mega-list">
+<a href="/resources/careers/" class="mega-row">
+<span class="mega-num">01</span>
+<span class="mega-row-body">
+<span class="mega-row-title">Career Resources</span>
+<span class="mega-row-desc">Resume tips, interview prep, and job-search guidance.</span>
+</span>
+</a>
+<a href="/resources/hiring/" class="mega-row">
+<span class="mega-num">02</span>
+<span class="mega-row-body">
+<span class="mega-row-title">Employer Resources</span>
+<span class="mega-row-desc">Practical guidance on hiring decisions and staffing models.</span>
+</span>
+</a>
+<a href="/resources/industry-insights/" class="mega-row">
+<span class="mega-num">03</span>
+<span class="mega-row-body">
+<span class="mega-row-title">Industry Insights</span>
+<span class="mega-row-desc">A closer look at hiring across Southern Point's focus areas.</span>
+</span>
+</a>
+<a href="/faq/" class="mega-row">
+<span class="mega-num">04</span>
+<span class="mega-row-body">
+<span class="mega-row-title">FAQs</span>
+<span class="mega-row-desc">Common questions from employers and job seekers.</span>
+</span>
+</a>
+</div>
+<a href="/resources/" class="mega-viewall">View All Resources &rarr;</a>
+</div>
+</div>
+</div>
+
+<div class="has-mega">
+<a href="/about/">About</a>
+<div class="mega-panel mega-narrow">
+<div class="mega-inner">
+<div class="mega-label">ABOUT</div>
+<div class="mega-list">
+<a href="/about/" class="mega-row">
+<span class="mega-row-body">
+<span class="mega-row-title">Who We Are</span>
+</span>
+</a>
+<a href="/about/#approach" class="mega-row">
+<span class="mega-row-body">
+<span class="mega-row-title">Our Approach</span>
+</span>
+</a>
+<a href="/about/#why" class="mega-row">
+<span class="mega-row-body">
+<span class="mega-row-title">Why Southern Point</span>
+</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+
+</nav>
+
+<div class="nav-right">
+<a class="nav-text-link" href="/jobs.html">Find Jobs</a>
+<a class="nav-text-link" href="/contact/">Contact</a>
+<a class="nav-cta" href="/request-talent/">Find Talent</a>
+<button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+<span></span><span></span><span></span>
+</button>
+</div>
+
+</div>
+
+</header>
+
+
+<div class="mobile-nav">
+<div class="container mobile-nav-inner">
+
+<div class="mobile-group">
+<a href="/services/" class="mobile-group-label">Services</a>
+<a href="/services/staffing-recruiting/">Staffing &amp; Recruiting</a>
+<a href="/services/professional-services/">Professional Services</a>
+<a href="/services/workforce-solutions/">Workforce Solutions</a>
+<a href="/services/specialized-solutions/">Specialized Solutions</a>
+</div>
+
+<div class="mobile-group">
+<a href="/industries/" class="mobile-group-label">Industries</a>
+<a href="/industries/technology/">Technology</a>
+<a href="/industries/healthcare/">Healthcare</a>
+<a href="/industries/sales/">Sales</a>
+<a href="/industries/operations/">Operations</a>
+<a href="/industries/administrative/">Administrative</a>
+</div>
+
+<div class="mobile-group">
+<a href="/resources/" class="mobile-group-label">Resources</a>
+<a href="/resources/careers/">Career Resources</a>
+<a href="/resources/hiring/">Employer Resources</a>
+<a href="/resources/industry-insights/">Industry Insights</a>
+<a href="/faq/">FAQs</a>
+</div>
+
+<div class="mobile-group">
+<a href="/about/" class="mobile-group-label">About</a>
+<a href="/about/#approach">Our Approach</a>
+<a href="/about/#why">Why Southern Point</a>
+</div>
+
+<div class="mobile-actions">
+<a href="/jobs.html">Find Jobs</a>
+<a href="/contact/">Contact</a>
+<a class="nav-cta" href="/request-talent/">Find Talent</a>
+</div>
+
+</div>
+</div>
+
+
+<!-- Confirmation banner target — JS injects a banner here when a page loads after a form submission -->
+<div id="bannerSlot"></div>
